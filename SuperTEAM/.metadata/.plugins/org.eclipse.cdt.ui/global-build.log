@@ -1,0 +1,264 @@
+Extracting support files...
+10:35:54 **** Build of configuration Debug for project Interrupcion1 ****
+make -j12 all 
+'Building file: ../synergy/ssp/src/driver/r_ioport/r_ioport.c'
+'Building file: ../synergy/ssp/src/driver/r_icu/r_icu.c'
+'Building file: ../synergy/ssp/src/driver/r_fmi/r_fmi.c'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/driver/r_ioport/r_ioport.d" -MT"synergy/ssp/src/driver/r_ioport/r_ioport.o" -c -o "synergy/ssp/src/driver/r_ioport/r_ioport.o" -x c "../synergy/ssp/src/driver/r_ioport/r_ioport.c"
+'Invoking: Cross ARM C Compiler'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/driver/r_icu/r_icu.d" -MT"synergy/ssp/src/driver/r_icu/r_icu.o" -c -o "synergy/ssp/src/driver/r_icu/r_icu.o" -x c "../synergy/ssp/src/driver/r_icu/r_icu.c"
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/driver/r_fmi/r_fmi.d" -MT"synergy/ssp/src/driver/r_fmi/r_fmi.o" -c -o "synergy/ssp/src/driver/r_fmi/r_fmi.o" -x c "../synergy/ssp/src/driver/r_fmi/r_fmi.c"
+'Building file: ../synergy/ssp/src/driver/r_elc/r_elc.c'
+'Building file: ../synergy/ssp/src/driver/r_cgc/hw/hw_cgc.c'
+'Building file: ../synergy/ssp/src/driver/r_cgc/r_cgc.c'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/driver/r_elc/r_elc.d" -MT"synergy/ssp/src/driver/r_elc/r_elc.o" -c -o "synergy/ssp/src/driver/r_elc/r_elc.o" -x c "../synergy/ssp/src/driver/r_elc/r_elc.c"
+'Invoking: Cross ARM C Compiler'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/driver/r_cgc/hw/hw_cgc.d" -MT"synergy/ssp/src/driver/r_cgc/hw/hw_cgc.o" -c -o "synergy/ssp/src/driver/r_cgc/hw/hw_cgc.o" -x c "../synergy/ssp/src/driver/r_cgc/hw/hw_cgc.c"
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/driver/r_cgc/r_cgc.d" -MT"synergy/ssp/src/driver/r_cgc/r_cgc.o" -c -o "synergy/ssp/src/driver/r_cgc/r_cgc.o" -x c "../synergy/ssp/src/driver/r_cgc/r_cgc.c"
+'Building file: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_cache.c'
+'Building file: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_clocks.c'
+'Building file: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_feature.c'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/s7g2/bsp_cache.d" -MT"synergy/ssp/src/bsp/mcu/s7g2/bsp_cache.o" -c -o "synergy/ssp/src/bsp/mcu/s7g2/bsp_cache.o" -x c "../synergy/ssp/src/bsp/mcu/s7g2/bsp_cache.c"
+'Invoking: Cross ARM C Compiler'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/s7g2/bsp_clocks.d" -MT"synergy/ssp/src/bsp/mcu/s7g2/bsp_clocks.o" -c -o "synergy/ssp/src/bsp/mcu/s7g2/bsp_clocks.o" -x c "../synergy/ssp/src/bsp/mcu/s7g2/bsp_clocks.c"
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/s7g2/bsp_feature.d" -MT"synergy/ssp/src/bsp/mcu/s7g2/bsp_feature.o" -c -o "synergy/ssp/src/bsp/mcu/s7g2/bsp_feature.o" -x c "../synergy/ssp/src/bsp/mcu/s7g2/bsp_feature.c"
+'Building file: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_fmi_R7FS7G27H3A01CFC.c'
+'Building file: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_group_irq.c'
+'Building file: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_hw_locks.c'
+'Invoking: Cross ARM C Compiler'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/s7g2/bsp_fmi_R7FS7G27H3A01CFC.d" -MT"synergy/ssp/src/bsp/mcu/s7g2/bsp_fmi_R7FS7G27H3A01CFC.o" -c -o "synergy/ssp/src/bsp/mcu/s7g2/bsp_fmi_R7FS7G27H3A01CFC.o" -x c "../synergy/ssp/src/bsp/mcu/s7g2/bsp_fmi_R7FS7G27H3A01CFC.c"
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/s7g2/bsp_group_irq.d" -MT"synergy/ssp/src/bsp/mcu/s7g2/bsp_group_irq.o" -c -o "synergy/ssp/src/bsp/mcu/s7g2/bsp_group_irq.o" -x c "../synergy/ssp/src/bsp/mcu/s7g2/bsp_group_irq.c"
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/s7g2/bsp_hw_locks.d" -MT"synergy/ssp/src/bsp/mcu/s7g2/bsp_hw_locks.o" -c -o "synergy/ssp/src/bsp/mcu/s7g2/bsp_hw_locks.o" -x c "../synergy/ssp/src/bsp/mcu/s7g2/bsp_hw_locks.c"
+'Finished building: ../synergy/ssp/src/driver/r_elc/r_elc.c'
+'Finished building: ../synergy/ssp/src/driver/r_icu/r_icu.c'
+'Finished building: ../synergy/ssp/src/driver/r_fmi/r_fmi.c'
+'Finished building: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_cache.c'
+'Finished building: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_clocks.c'
+'Finished building: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_feature.c'
+'Finished building: ../synergy/ssp/src/driver/r_ioport/r_ioport.c'
+' '
+' '
+'Finished building: ../synergy/ssp/src/driver/r_cgc/hw/hw_cgc.c'
+' '
+'Finished building: ../synergy/ssp/src/driver/r_cgc/r_cgc.c'
+'Finished building: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_fmi_R7FS7G27H3A01CFC.c'
+' '
+' '
+' '
+' '
+' '
+'Finished building: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_group_irq.c'
+' '
+' '
+'Finished building: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_hw_locks.c'
+' '
+'Building file: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_module_stop.c'
+' '
+'Building file: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_rom_registers.c'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/s7g2/bsp_module_stop.d" -MT"synergy/ssp/src/bsp/mcu/s7g2/bsp_module_stop.o" -c -o "synergy/ssp/src/bsp/mcu/s7g2/bsp_module_stop.o" -x c "../synergy/ssp/src/bsp/mcu/s7g2/bsp_module_stop.c"
+'Building file: ../synergy/ssp/src/bsp/mcu/all/bsp_common.c'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/s7g2/bsp_rom_registers.d" -MT"synergy/ssp/src/bsp/mcu/s7g2/bsp_rom_registers.o" -c -o "synergy/ssp/src/bsp/mcu/s7g2/bsp_rom_registers.o" -x c "../synergy/ssp/src/bsp/mcu/s7g2/bsp_rom_registers.c"
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/all/bsp_common.d" -MT"synergy/ssp/src/bsp/mcu/all/bsp_common.o" -c -o "synergy/ssp/src/bsp/mcu/all/bsp_common.o" -x c "../synergy/ssp/src/bsp/mcu/all/bsp_common.c"
+'Building file: ../synergy/ssp/src/bsp/mcu/all/bsp_common_leds.c'
+'Building file: ../synergy/ssp/src/bsp/mcu/all/bsp_delay.c'
+'Building file: ../synergy/ssp/src/bsp/mcu/all/bsp_irq.c'
+'Invoking: Cross ARM C Compiler'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/all/bsp_common_leds.d" -MT"synergy/ssp/src/bsp/mcu/all/bsp_common_leds.o" -c -o "synergy/ssp/src/bsp/mcu/all/bsp_common_leds.o" -x c "../synergy/ssp/src/bsp/mcu/all/bsp_common_leds.c"
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/all/bsp_delay.d" -MT"synergy/ssp/src/bsp/mcu/all/bsp_delay.o" -c -o "synergy/ssp/src/bsp/mcu/all/bsp_delay.o" -x c "../synergy/ssp/src/bsp/mcu/all/bsp_delay.c"
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/all/bsp_irq.d" -MT"synergy/ssp/src/bsp/mcu/all/bsp_irq.o" -c -o "synergy/ssp/src/bsp/mcu/all/bsp_irq.o" -x c "../synergy/ssp/src/bsp/mcu/all/bsp_irq.c"
+'Finished building: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_module_stop.c'
+'Building file: ../synergy/ssp/src/bsp/mcu/all/bsp_locking.c'
+' '
+'Building file: ../synergy/ssp/src/bsp/mcu/all/bsp_register_protection.c'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/all/bsp_locking.d" -MT"synergy/ssp/src/bsp/mcu/all/bsp_locking.o" -c -o "synergy/ssp/src/bsp/mcu/all/bsp_locking.o" -x c "../synergy/ssp/src/bsp/mcu/all/bsp_locking.c"
+'Invoking: Cross ARM C Compiler'
+'Finished building: ../synergy/ssp/src/bsp/mcu/s7g2/bsp_rom_registers.c'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/all/bsp_register_protection.d" -MT"synergy/ssp/src/bsp/mcu/all/bsp_register_protection.o" -c -o "synergy/ssp/src/bsp/mcu/all/bsp_register_protection.o" -x c "../synergy/ssp/src/bsp/mcu/all/bsp_register_protection.c"
+'Finished building: ../synergy/ssp/src/bsp/mcu/all/bsp_common.c'
+' '
+'Building file: ../synergy/ssp/src/bsp/mcu/all/bsp_sbrk.c'
+' '
+'Building file: ../synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/startup_S7G2.c'
+'Invoking: Cross ARM C Compiler'
+'Building file: ../synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/system_S7G2.c'
+'Finished building: ../synergy/ssp/src/bsp/mcu/all/bsp_common_leds.c'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/mcu/all/bsp_sbrk.d" -MT"synergy/ssp/src/bsp/mcu/all/bsp_sbrk.o" -c -o "synergy/ssp/src/bsp/mcu/all/bsp_sbrk.o" -x c "../synergy/ssp/src/bsp/mcu/all/bsp_sbrk.c"
+'Invoking: Cross ARM C Compiler'
+'Finished building: ../synergy/ssp/src/bsp/mcu/all/bsp_delay.c'
+'Invoking: Cross ARM C Compiler'
+' '
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/startup_S7G2.d" -MT"synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/startup_S7G2.o" -c -o "synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/startup_S7G2.o" -x c "../synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/startup_S7G2.c"
+'Finished building: ../synergy/ssp/src/bsp/mcu/all/bsp_irq.c'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/system_S7G2.d" -MT"synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/system_S7G2.o" -c -o "synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/system_S7G2.o" -x c "../synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/system_S7G2.c"
+' '
+'Finished building: ../synergy/ssp/src/bsp/mcu/all/bsp_locking.c'
+' '
+' '
+'Building file: ../synergy/board/s7g2_sk/bsp_init.c'
+'Building file: ../synergy/board/s7g2_sk/bsp_leds.c'
+'Building file: ../synergy/board/s7g2_sk/bsp_qspi.c'
+'Invoking: Cross ARM C Compiler'
+'Invoking: Cross ARM C Compiler'
+'Finished building: ../synergy/ssp/src/bsp/mcu/all/bsp_register_protection.c'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/board/s7g2_sk/bsp_init.d" -MT"synergy/board/s7g2_sk/bsp_init.o" -c -o "synergy/board/s7g2_sk/bsp_init.o" -x c "../synergy/board/s7g2_sk/bsp_init.c"
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/board/s7g2_sk/bsp_leds.d" -MT"synergy/board/s7g2_sk/bsp_leds.o" -c -o "synergy/board/s7g2_sk/bsp_leds.o" -x c "../synergy/board/s7g2_sk/bsp_leds.c"
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"synergy/board/s7g2_sk/bsp_qspi.d" -MT"synergy/board/s7g2_sk/bsp_qspi.o" -c -o "synergy/board/s7g2_sk/bsp_qspi.o" -x c "../synergy/board/s7g2_sk/bsp_qspi.c"
+' '
+'Finished building: ../synergy/ssp/src/bsp/mcu/all/bsp_sbrk.c'
+'Finished building: ../synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/startup_S7G2.c'
+'Building file: ../src/synergy_gen/common_data.c'
+' '
+' '
+'Invoking: Cross ARM C Compiler'
+'Building file: ../src/synergy_gen/hal_data.c'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"src/synergy_gen/common_data.d" -MT"src/synergy_gen/common_data.o" -c -o "src/synergy_gen/common_data.o" -x c "../src/synergy_gen/common_data.c"
+'Building file: ../src/synergy_gen/main.c'
+'Finished building: ../synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/system_S7G2.c'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"src/synergy_gen/hal_data.d" -MT"src/synergy_gen/hal_data.o" -c -o "src/synergy_gen/hal_data.o" -x c "../src/synergy_gen/hal_data.c"
+'Invoking: Cross ARM C Compiler'
+' '
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"src/synergy_gen/main.d" -MT"src/synergy_gen/main.o" -c -o "src/synergy_gen/main.o" -x c "../src/synergy_gen/main.c"
+'Finished building: ../synergy/board/s7g2_sk/bsp_init.c'
+'Finished building: ../synergy/board/s7g2_sk/bsp_leds.c'
+' '
+'Building file: ../src/synergy_gen/pin_data.c'
+' '
+'Building file: ../src/hal_entry.c'
+'Finished building: ../synergy/board/s7g2_sk/bsp_qspi.c'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"src/synergy_gen/pin_data.d" -MT"src/synergy_gen/pin_data.o" -c -o "src/synergy_gen/pin_data.o" -x c "../src/synergy_gen/pin_data.c"
+'Invoking: Cross ARM C Compiler'
+' '
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"src/hal_entry.d" -MT"src/hal_entry.o" -c -o "src/hal_entry.o" -x c "../src/hal_entry.c"
+'Finished building: ../src/synergy_gen/common_data.c'
+'Finished building: ../src/synergy_gen/main.c'
+' '
+' '
+'Finished building: ../src/synergy_gen/hal_data.c'
+' '
+'Finished building: ../src/synergy_gen/pin_data.c'
+' '
+'Finished building: ../src/hal_entry.c'
+' '
+'Building target: Interrupcion1.elf'
+'Invoking: Cross ARM C Linker'
+arm-none-eabi-gcc @"Interrupcion1.elf.in"
+'Finished building target: Interrupcion1.elf'
+' '
+'Invoking: Cross ARM GNU Create Flash Image'
+arm-none-eabi-objcopy -O srec "Interrupcion1.elf"  "Interrupcion1.srec"
+'Invoking: Cross ARM GNU Print Size'
+arm-none-eabi-size --format=berkeley "Interrupcion1.elf"
+   text	   data	    bss	    dec	    hex	filename
+  15880	    120	   8376	  24376	   5f38	Interrupcion1.elf
+'Finished building: Interrupcion1.srec'
+'Finished building: Interrupcion1.siz'
+' '
+' '
+Extracting support files...
+10:38:27 **** Incremental Build of configuration Debug for project Interrupcion1 ****
+make -j12 all 
+'Building file: ../src/hal_entry.c'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"src/hal_entry.d" -MT"src/hal_entry.o" -c -o "src/hal_entry.o" -x c "../src/hal_entry.c"
+../src/hal_entry.c: In function 'button_callback_SW5':
+../src/hal_entry.c:17:56: warning: unused parameter 'p_args' [-Wunused-parameter]
+ void button_callback_SW5(external_irq_callback_args_t *p_args)
+                                                        ^
+'Finished building: ../src/hal_entry.c'
+' '
+'Building target: Interrupcion1.elf'
+'Invoking: Cross ARM C Linker'
+arm-none-eabi-gcc @"Interrupcion1.elf.in"
+'Finished building target: Interrupcion1.elf'
+' '
+'Invoking: Cross ARM GNU Create Flash Image'
+arm-none-eabi-objcopy -O srec "Interrupcion1.elf"  "Interrupcion1.srec"
+'Invoking: Cross ARM GNU Print Size'
+arm-none-eabi-size --format=berkeley "Interrupcion1.elf"
+   text	   data	    bss	    dec	    hex	filename
+  17000	    124	   8404	  25528	   63b8	Interrupcion1.elf
+'Finished building: Interrupcion1.srec'
+'Finished building: Interrupcion1.siz'
+' '
+' '
+Extracting support files...
+10:48:00 **** Incremental Build of configuration Debug for project Interrupcion1 ****
+make -j12 all 
+'Building file: ../src/synergy_gen/hal_data.c'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"src/synergy_gen/hal_data.d" -MT"src/synergy_gen/hal_data.o" -c -o "src/synergy_gen/hal_data.o" -x c "../src/synergy_gen/hal_data.c"
+'Finished building: ../src/synergy_gen/hal_data.c'
+' '
+'Building target: Interrupcion1.elf'
+'Invoking: Cross ARM C Linker'
+arm-none-eabi-gcc @"Interrupcion1.elf.in"
+'Finished building target: Interrupcion1.elf'
+' '
+'Invoking: Cross ARM GNU Create Flash Image'
+arm-none-eabi-objcopy -O srec "Interrupcion1.elf"  "Interrupcion1.srec"
+'Invoking: Cross ARM GNU Print Size'
+arm-none-eabi-size --format=berkeley "Interrupcion1.elf"
+   text	   data	    bss	    dec	    hex	filename
+  17000	    124	   8404	  25528	   63b8	Interrupcion1.elf
+'Finished building: Interrupcion1.siz'
+'Finished building: Interrupcion1.srec'
+' '
+' '
+Extracting support files...
+10:48:24 **** Incremental Build of configuration Debug for project Interrupcion1 ****
+make -j12 all 
+'Invoking: Cross ARM GNU Print Size'
+arm-none-eabi-size --format=berkeley "Interrupcion1.elf"
+   text	   data	    bss	    dec	    hex	filename
+  17000	    124	   8404	  25528	   63b8	Interrupcion1.elf
+'Finished building: Interrupcion1.siz'
+' '
+Extracting support files...
+10:52:01 **** Incremental Build of configuration Debug for project Interrupcion1 ****
+make -j12 all 
+'Building file: ../src/synergy_gen/hal_data.c'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\e2_studio\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy_cfg\ssp_cfg\driver" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\api" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\synergy\ssp\inc\driver\instances" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src" -I"C:\Users\SEI103\Documents\SuperTEAM\Interrupcion1\src\synergy_gen" -std=c99 -MMD -MP -MF"src/synergy_gen/hal_data.d" -MT"src/synergy_gen/hal_data.o" -c -o "src/synergy_gen/hal_data.o" -x c "../src/synergy_gen/hal_data.c"
+'Finished building: ../src/synergy_gen/hal_data.c'
+' '
+'Building target: Interrupcion1.elf'
+'Invoking: Cross ARM C Linker'
+arm-none-eabi-gcc @"Interrupcion1.elf.in"
+'Finished building target: Interrupcion1.elf'
+' '
+'Invoking: Cross ARM GNU Create Flash Image'
+arm-none-eabi-objcopy -O srec "Interrupcion1.elf"  "Interrupcion1.srec"
+'Invoking: Cross ARM GNU Print Size'
+arm-none-eabi-size --format=berkeley "Interrupcion1.elf"
+   text	   data	    bss	    dec	    hex	filename
+  17000	    124	   8404	  25528	   63b8	Interrupcion1.elf
+'Finished building: Interrupcion1.siz'
+'Finished building: Interrupcion1.srec'
+' '
+' '
+Extracting support files...
+10:52:27 **** Incremental Build of configuration Debug for project Interrupcion1 ****
+make -j12 all 
+'Invoking: Cross ARM GNU Print Size'
+arm-none-eabi-size --format=berkeley "Interrupcion1.elf"
+   text	   data	    bss	    dec	    hex	filename
+  17000	    124	   8404	  25528	   63b8	Interrupcion1.elf
+'Finished building: Interrupcion1.siz'
+' '

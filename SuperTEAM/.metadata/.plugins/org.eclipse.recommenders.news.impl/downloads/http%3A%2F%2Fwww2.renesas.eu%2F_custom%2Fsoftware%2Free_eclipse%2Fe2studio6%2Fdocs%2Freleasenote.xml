@@ -1,0 +1,52 @@
+<rss version="2.0">
+<channel>
+<title>e2 studio 6 Release Notes</title>
+<link>http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenote.htm</link>
+<language>en</language>
+<description>e2 studio Release Notes</description>
+<item>
+<title>e2 studio 6.3.0</title>
+<guid isPermaLink="false">
+http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.3.0/releasenote_6.3.0.pdf
+</guid>
+<link>http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.3.0/releasenote_6.3.0.pdf</link>
+<description>
+<div>e2 studio 6.3.0<a href="http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.3.0/releasenote_6.3.0.pdf">Release Notes</a></div>
+</description>
+<pubDate>Monday, 21 May 2018 10:00:00 +0000</pubDate>
+</item>
+<item>
+<title>e2 studio 6.2.0</title>
+<guid isPermaLink="false">
+http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.2.0/releasenote_6.2.0.pdf
+</guid>
+<link>http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.2.0/releasenote_6.2.0.pdf</link>
+<description>
+<div>e2 studio 6.2.0<a href="http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.2.0/releasenote_6.2.0.pdf">Release Notes</a></div>
+</description>
+<pubDate>Monday, 22 Jan 2018 10:00:00 +0000</pubDate>
+</item>
+<item>
+<title>e2 studio 6.1.0</title>
+<guid isPermaLink="false">
+http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.1.0/releasenote_6.1.0.pdf
+</guid>
+<link>http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.1.0/releasenote_6.1.0.pdf</link>
+<description>
+<div>e2 studio 6.1.0<a href="http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.1.0/releasenote_6.1.0.pdf">Release Notes</a></div>
+</description>
+<pubDate>Wednesday, 18 Oct 2017 10:00:00 +0000</pubDate>
+</item>
+<item>
+<title>e2 studio 6.0.0</title>
+<guid isPermaLink="false">
+http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.0.0/releasenote_6.0.0.pdf
+</guid>
+<link>http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.0.0/releasenote_6.0.0.pdf</link>
+<description>
+<div>e2 studio 6.0.0<a href="http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.0.0/releasenote_6.0.0.pdf">Release Notes</a></div>
+</description>
+<pubDate>Friday, 04 Aug 2017 13:00:00 +0000</pubDate>
+</item>
+</channel>
+</rss>

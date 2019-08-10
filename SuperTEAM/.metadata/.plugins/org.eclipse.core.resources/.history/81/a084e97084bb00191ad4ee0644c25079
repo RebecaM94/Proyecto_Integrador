@@ -1,0 +1,10 @@
+Renesas\#\#BSP\#\#Board\#\#s7g2_sk\#\#\#\#1.4.0/libraries=
+Renesas\#\#BSP\#\#s7g2\#\#device\#\#\#\#1.4.0/libraries=
+Renesas\#\#BSP\#\#s7g2\#\#device\#\#R7FS7G27H3A01CFC\#\#1.4.0/libraries=
+Renesas\#\#BSP\#\#s7g2\#\#ssp\#\#\#\#1.4.0/libraries=
+Renesas\#\#Common\#\#all\#\#ssp_common\#\#\#\#1.4.0/libraries=libDSP_Lib.a
+Renesas\#\#HAL\ Drivers\#\#all\#\#r_cgc\#\#\#\#1.4.0/libraries=
+Renesas\#\#HAL\ Drivers\#\#all\#\#r_elc\#\#\#\#1.4.0/libraries=
+Renesas\#\#HAL\ Drivers\#\#all\#\#r_fmi\#\#\#\#1.4.0/libraries=
+Renesas\#\#HAL\ Drivers\#\#all\#\#r_ioport\#\#\#\#1.4.0/libraries=
+eclipse.preferences.version=1

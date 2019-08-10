@@ -1,0 +1,11 @@
+10:52:27 **** Incremental Build of configuration Debug for project Interrupcion1 ****
+make -j12 all 
+'Invoking: Cross ARM GNU Print Size'
+arm-none-eabi-size --format=berkeley "Interrupcion1.elf"
+   text	   data	    bss	    dec	    hex	filename
+  17000	    124	   8404	  25528	   63b8	Interrupcion1.elf
+'Finished building: Interrupcion1.siz'
+' '
+
+10:52:27 Build Finished. 0 errors, 0 warnings. (took 506ms)
+
