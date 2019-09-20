@@ -357,7 +357,7 @@
   <v1:configSetting configurationId="etherc1.rmii.txd0" altId="etherc1.rmii.txd0.p700">
     <v1:connectionSetting altId="p700.etherc1.rmii.txd0"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="etherc1.rmii.txd1" altId="etherc1.rmii.txd1.none"></v1:configSetting>
+  <v1:configSetting configurationId="etherc1.rmii.txd1" altId="etherc1.rmii.txd1.none"/>
   <v1:configSetting configurationId="sci0.sck" altId="sci0.sck.p412">
     <v1:connectionSetting altId="p412.sci0.sck"/>
   </v1:configSetting>

@@ -378,4 +378,20 @@ Synergy Configuration
       Callback: NULL
       Overflow Interrupt Priority: Disabled
       
+    Instance "g_timer0 Timer Driver on r_gpt"
+      Name: g_timer0
+      Channel: 0
+      Mode: Periodic
+      Period Value: 100
+      Period Unit: Milliseconds
+      Duty Cycle Value: 50
+      Duty Cycle Unit: Unit Percent
+      Auto Start: True
+      GTIOCA Output Enabled: False
+      GTIOCA Stop Level: Pin Level Low
+      GTIOCB Output Enabled: False
+      GTIOCB Stop Level: Pin Level Low
+      Callback: sampling_time_callback
+      Overflow Interrupt Priority: Priority 1
+      
   Messaging
