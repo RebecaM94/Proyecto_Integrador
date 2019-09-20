@@ -326,7 +326,7 @@ SSI0: SSIWS"
 GPT1: GTIOCA
 PDC0: PIXD5
 SSI0: SSITXD"
-"P406","7","RMII_TXD1","Ethernet_Controller_1_RMII_RMII1_TXD1","High","","Peripheral mode","CMOS","None","ETHERC1: TXD1
+"P406","7","GPT1_GTIOCB","","Low","","Peripheral mode","CMOS","None","ETHERC1: TXD1
 GPT1: GTIOCB
 PDC0: PIXD4
 SSI0: SSIRXD"

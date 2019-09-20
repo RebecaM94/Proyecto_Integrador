@@ -357,9 +357,7 @@
   <v1:configSetting configurationId="etherc1.rmii.txd0" altId="etherc1.rmii.txd0.p700">
     <v1:connectionSetting altId="p700.etherc1.rmii.txd0"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="etherc1.rmii.txd1" altId="etherc1.rmii.txd1.p406">
-    <v1:connectionSetting altId="p406.etherc1.rmii.txd1"/>
-  </v1:configSetting>
+  <v1:configSetting configurationId="etherc1.rmii.txd1" altId="etherc1.rmii.txd1.none"></v1:configSetting>
   <v1:configSetting configurationId="sci0.sck" altId="sci0.sck.p412">
     <v1:connectionSetting altId="p412.sci0.sck"/>
   </v1:configSetting>
@@ -583,8 +581,8 @@
   <v1:configSetting configurationId="p407" altId="p407.usbfs0.vbus">
     <v1:connectionSetting altId="usbfs0.vbus.p407"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="p406" altId="p406.etherc1.rmii.txd1">
-    <v1:connectionSetting altId="etherc1.rmii.txd1.p406"/>
+  <v1:configSetting configurationId="p406" altId="p406.gpt1.gtiocb">
+    <v1:connectionSetting altId="gpt1.gtiocb.p406"/>
   </v1:configSetting>
   <v1:configSetting configurationId="p405" altId="p405.etherc1.rmii.txd_en">
     <v1:connectionSetting altId="etherc1.rmii.txd_en.p405"/>
@@ -603,7 +601,6 @@
     <v1:connectionSetting altId="ctsu0.ts04.p408"/>
   </v1:configSetting>
   <v1:configSetting configurationId="pa00.gpio_drivecapacity" altId="pa00.gpio_speed.gpio_speed_medium"/>
-  <v1:configSetting configurationId="p406.gpio_drivecapacity" altId="p406.gpio_speed.gpio_speed_high"/>
   <v1:configSetting configurationId="debug0.mode" altId="debug0.mode.jtag"/>
   <v1:configSetting configurationId="p600.gpio_mode" altId="p600.gpio_mode.gpio_mode_out.low"/>
   <v1:configSetting configurationId="p700.gpio_mode" altId="p700.gpio_mode.gpio_mode_peripheral"/>
@@ -860,7 +857,6 @@
   <v1:propertySetting propertyId="p603.symbolic_name" value="GPIO3"/>
   <v1:propertySetting propertyId="p303.symbolic_name" value="GPIO39"/>
   <v1:propertySetting propertyId="p106.symbolic_name" value="SCI8_SCK8"/>
-  <v1:propertySetting propertyId="p406.symbolic_name" value="Ethernet_Controller_1_RMII_RMII1_TXD1"/>
   <v1:propertySetting propertyId="p002.symbolic_name" value="GPIO27"/>
   <v1:propertySetting propertyId="p302.symbolic_name" value="SCI2_TXD2_SDA2_MOSI2"/>
   <v1:propertySetting propertyId="p500.symbolic_name" value="Quad_SPI_QSPCLK"/>
@@ -951,4 +947,9 @@
     <v1:connectionSetting altId="p213.cgc0.xtal"/>
   </v1:configSetting>
   <v1:configSetting configurationId="p213.gpio_mode" altId="p213.gpio_mode.gpio_mode_peripheral"/>
+  <v1:configSetting configurationId="gpt1.pairing" altId="gpt1.pairing.b"/>
+  <v1:configSetting configurationId="gpt1.gtiocb" altId="gpt1.gtiocb.p406">
+    <v1:connectionSetting altId="p406.gpt1.gtiocb"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="gpt1.mode" altId="gpt1.mode.gtiocaorgtiocb.b"/>
 </v1:pinSettings>
