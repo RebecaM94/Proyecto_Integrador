@@ -266,6 +266,9 @@ Synergy Configuration
   Module "Timer Driver on r_gpt"
     Parameter Checking: Default (BSP)
     
+  Module "Input Capture Driver on r_gpt_input_capture"
+    Parameter Checking: Default (BSP)
+    
   HAL
     Instance "g_ioport I/O Port Driver on r_ioport"
       Name [Fixed]: g_ioport
@@ -393,5 +396,21 @@ Synergy Configuration
       GTIOCB Stop Level: Pin Level Low
       Callback: sampling_time_callback
       Overflow Interrupt Priority: Priority 1
+      
+    Instance "g_input_capture Input Capture Driver on r_gpt_input_capture"
+      Name: g_input_capture
+      Channel: 2
+      Mode: Period
+      Signal Edge: Rising
+      Repetition: Periodic
+      Auto Start: True
+      Callback: input_capture_callback
+      Input Capture Signal Pin: GTIOCA
+      GTIOCx Signal Filter: None
+      Clock Divider: PCLK/1
+      Input Capture Enable Level: None
+      Input Capture Enable Filter: None (No filtering)
+      Capture Interrupt Priority: Priority 2
+      Overflow Interrupt Priority: Priority 2
       
   Messaging

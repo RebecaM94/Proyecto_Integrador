@@ -138,6 +138,10 @@
       <description>General Purpose Timer: Provides=[Timer ,GPT]</description>
       <originalPack>Renesas.Synergy.1.4.0.pack</originalPack>
     </component>
+    <component apiversion="" class="HAL Drivers" condition="" group="all" subgroup="r_gpt_input_capture" variant="" vendor="Renesas" version="1.4.0">
+      <description>Timer Input Capture: Provides=[Input Capture] , Requires=[GPT]</description>
+      <originalPack>Renesas.Synergy.1.4.0.pack</originalPack>
+    </component>
   </synergyComponentSelection>
   <synergyIcuConfiguration/>
   <synergyMessagingConfiguration/>
@@ -269,6 +273,22 @@
       <property id="module.driver.timer.p_callback" value="sampling_time_callback"/>
       <property id="module.driver.timer.irq_ipl" value="board.icu.common.irq.priority1"/>
     </module>
+    <module id="module.driver.input_capture_on_gpt.1894093731">
+      <property id="module.driver.input_capture.name" value="g_input_capture"/>
+      <property id="module.driver.input_capture.channel" value="2"/>
+      <property id="module.driver.input_capture.mode" value="module.driver.input_capture.mode.period"/>
+      <property id="module.driver.input_capture.signal_edge" value="module.driver.input_capture.signal_edge.rising"/>
+      <property id="module.driver.input_capture.repetition" value="module.driver.input_capture.repetition.periodic"/>
+      <property id="module.driver.input_capture.autostart" value="module.driver.input_capture.autostart.true"/>
+      <property id="module.driver.input_capture.p_callback" value="input_capture_callback"/>
+      <property id="module.driver.input_capture.signal" value="module.driver.input_capture.signal.gtioca"/>
+      <property id="module.driver.input_capture.signal_filter" value="module.driver.input_capture.signal_filter.none"/>
+      <property id="module.driver.input_capture.clock_divider" value="module.driver.input_capture.clock_divider.div1"/>
+      <property id="module.driver.input_capture.enable_level" value="module.driver.input_capture.enable_level.none"/>
+      <property id="module.driver.input_capture.enable_filter" value="module.driver.input_capture.enable_filter.none"/>
+      <property id="module.driver.input_capture.capture_ipl" value="board.icu.common.irq.priority2"/>
+      <property id="module.driver.input_capture.overflow_ipl" value="board.icu.common.irq.priority2"/>
+    </module>
     <context id="_hal.0">
       <stack module="module.driver.ioport_on_ioport.0"/>
       <stack module="module.driver.fmi_on_fmi.0"/>
@@ -277,6 +297,7 @@
       <stack module="module.driver.adc_on_adc.667923032"/>
       <stack module="module.driver.timer_on_gpt.1855508172"/>
       <stack module="module.driver.timer_on_gpt.349019169"/>
+      <stack module="module.driver.input_capture_on_gpt.1894093731"/>
     </context>
     <config id="config.driver.cgc">
       <property id="config.driver.cgc.param_checking_enable" value="config.driver.cgc.param_checking_enable.bsp"/>
@@ -303,6 +324,9 @@
     </config>
     <config id="config.driver.elc">
       <property id="config.driver.elc.checking" value="config.driver.elc.checking.system"/>
+    </config>
+    <config id="config.driver.gpt_input_capture">
+      <property id="config.driver.gpt_input_capture.param_checking_enable" value="config.driver.gpt_input_capture.param_checking_enable.bsp"/>
     </config>
   </synergyModuleConfiguration>
   <synergyPinConfiguration>
