@@ -1,10 +1,12 @@
 #include "new_thread0.h"
+#include "main_thread.h"
 
 #define LOW 1
 #define HIGH 0
 
 uint16_t u16ADC_Data = 0;
 uint16_t FilteredData = 0;
+UINT lcd_message[2]={12,13};
 
 static uint32_t capture_counter = 0;
 
@@ -31,6 +33,12 @@ void new_thread0_entry(void)
 
     while(1)
     {
+        lcd_message[0]=(UINT) FilteredData;
+
+        /* send message to Thread 1 */
+        // (TX_QUEUE *queue_ptr, VOID *source_ptr, ULONG wait_option);
+        tx_queue_send(&g_new_queue_lcd, lcd_message, TX_NO_WAIT);
+
         tx_thread_sleep (1);
     }
 }

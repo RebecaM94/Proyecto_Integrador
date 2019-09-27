@@ -1,13 +1,13 @@
 /* generated thread header file - do not edit */
-#ifndef LCD_THREAD_H_
-#define LCD_THREAD_H_
+#ifndef MAIN_THREAD_H_
+#define MAIN_THREAD_H_
 #include "bsp_api.h"
 #include "tx_api.h"
 #include "hal_data.h"
 #ifdef __cplusplus 
-extern "C" void lcd_thread_entry(void);
+extern "C" void main_thread_entry(void);
 #else 
-extern void lcd_thread_entry(void);
+extern void main_thread_entry(void);
 #endif
 #include "r_sci_spi.h"
 #include "r_spi_api.h"
@@ -93,7 +93,8 @@ extern const sf_message_instance_t g_sf_message0;
 void g_sf_touch_panel_i2c_err_callback(void *p_instance, void *p_data);
 void sf_touch_panel_i2c_init0(void);
 extern TX_SEMAPHORE g_main_semaphore_lcdc;
+extern TX_QUEUE g_new_queue_lcd;
 #ifdef __cplusplus
 } /* extern "C" */
 #endif
-#endif /* LCD_THREAD_H_ */
+#endif /* MAIN_THREAD_H_ */

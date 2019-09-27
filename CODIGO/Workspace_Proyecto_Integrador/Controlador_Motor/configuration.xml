@@ -682,7 +682,7 @@
       <stack module="module.driver.cgc_on_cgc.0"/>
     </context>
     <context id="rtos.threadx.thread.149014099">
-      <property id="_symbol" value="lcd_thread"/>
+      <property id="_symbol" value="main_thread"/>
       <property id="rtos.threadx.thread.name" value="LCD Thread"/>
       <property id="rtos.threadx.thread.stack" value="2048"/>
       <property id="rtos.threadx.thread.priority" value="6"/>
@@ -717,6 +717,12 @@
         <property id="rtos.threadx.object.semaphore.name" value="Main Semaphore"/>
         <property id="rtos.threadx.object.semaphore.symbol" value="g_main_semaphore_lcdc"/>
         <property id="rtos.threadx.object.semaphore.count" value="0"/>
+      </object>
+      <object id="rtos.threadx.object.queue.674268792">
+        <property id="rtos.threadx.object.queue.name" value="LCD Queue"/>
+        <property id="rtos.threadx.object.queue.symbol" value="g_new_queue_lcd"/>
+        <property id="rtos.threadx.object.queue.msg_size" value="2"/>
+        <property id="rtos.threadx.object.queue.queue_size" value="20"/>
       </object>
     </context>
     <context id="rtos.threadx.thread.955861978">
