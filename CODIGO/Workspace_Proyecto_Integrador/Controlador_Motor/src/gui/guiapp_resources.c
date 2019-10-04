@@ -6,7 +6,7 @@
 /*  site at www.expresslogic.com.                                              */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.2.9                                               */
-/*  Date (dd.mm.yyyy): 27. 9.2019   Time (hh:mm): 16:19                        */
+/*  Date (dd.mm.yyyy):  4.10.2019   Time (hh:mm): 15:36                        */
 /*******************************************************************************/
 
 
@@ -18,9 +18,9 @@
 GX_CONST GX_COLOR display_1_theme_1_color_table[] =
 {
     0x00000000,
-    0x00007bef,
+    0x0000ef7d,
     0x0000e71c,
-    0x00009cce,
+    0x00008e1d,
     0x000074d5,
     0x00000000,
     0x0000ffff,
@@ -327,16 +327,54 @@ GX_CONST GX_PIXELMAP *display_1_theme_1_pixelmap_table[] =
 
 /* String values                                                               */
 
-GX_CONST GX_UBYTE display_1_STRING_1_English[7] = "prompt";
-GX_CONST GX_UBYTE display_1_STRING_2_English[7] = "prueba";
+GX_CONST GX_UBYTE display_1_STRING_5_English[40] = "Nombre del proyecto: Control Vel. Motor";
+GX_CONST GX_UBYTE display_1_STRING_6_English[12] = "Duty Cycle:";
+GX_CONST GX_UBYTE display_1_STRING_7_English[11] = "Velocidad:";
+GX_CONST GX_UBYTE display_1_STRING_9_English[15] = "Version de SW:";
+GX_CONST GX_UBYTE display_1_STRING_10_English[15] = "Version de HW:";
+GX_CONST GX_UBYTE display_1_STRING_11_English[15] = "Programadores:";
+GX_CONST GX_UBYTE display_1_STRING_33_English[16] = "Velazquez, Aldo";
+GX_CONST GX_UBYTE display_1_STRING_30_English[20] = "Preciado, Francisco";
+GX_CONST GX_UBYTE display_1_STRING_32_English[19] = "Mendizabal, Rebeca";
+GX_CONST GX_UBYTE display_1_STRING_21_English[13] = "CESEQ-C001 /";
+GX_CONST GX_UBYTE display_1_STRING_22_English[11] = "CESEQ-P001";
+GX_CONST GX_UBYTE display_1_STRING_23_English[4] = "RPM";
+GX_CONST GX_UBYTE display_1_STRING_24_English[2] = "%";
+GX_CONST GX_UBYTE display_1_STRING_25_English[6] = "1.0.0";
+GX_CONST GX_UBYTE display_1_STRING_1_English[10] = "SetPoint:";
+GX_CONST GX_UBYTE display_1_STRING_2_English[12] = "Referencia:";
+GX_CONST GX_UBYTE display_1_STRING_3_English[19] = "Control Vel. Motor";
+GX_CONST GX_UBYTE display_1_STRING_4_English[22] = "Control Vel. Motor CD";
+GX_CONST GX_UBYTE display_1_STRING_8_English[12] = "CESEQ-C001/";
+GX_CONST GX_UBYTE display_1_STRING_12_English[11] = "CESEQ-P005";
+GX_CONST GX_UBYTE display_1_STRING_13_English[12] = "CESEQ-C005/";
 
 /* String Table for display_1 language English                                 */
 
-GX_CONST GX_UBYTE *display_1_English_string_table[3] =
+GX_CONST GX_UBYTE *display_1_English_string_table[22] =
 {
     GX_NULL,
+    display_1_STRING_5_English,
+    display_1_STRING_6_English,
+    display_1_STRING_7_English,
+    display_1_STRING_9_English,
+    display_1_STRING_10_English,
+    display_1_STRING_11_English,
+    display_1_STRING_33_English,
+    display_1_STRING_30_English,
+    display_1_STRING_32_English,
+    display_1_STRING_21_English,
+    display_1_STRING_22_English,
+    display_1_STRING_23_English,
+    display_1_STRING_24_English,
+    display_1_STRING_25_English,
     display_1_STRING_1_English,
-    display_1_STRING_2_English
+    display_1_STRING_2_English,
+    display_1_STRING_3_English,
+    display_1_STRING_4_English,
+    display_1_STRING_8_English,
+    display_1_STRING_12_English,
+    display_1_STRING_13_English
 
 };
 

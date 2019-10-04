@@ -6,7 +6,7 @@
 /*  site at www.expresslogic.com.                                              */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.2.9                                               */
-/*  Date (dd.mm.yyyy): 27. 9.2019   Time (hh:mm): 16:19                        */
+/*  Date (dd.mm.yyyy):  4.10.2019   Time (hh:mm): 15:36                        */
 /*******************************************************************************/
 
 
@@ -80,8 +80,27 @@
 
 /* String Ids                                                                  */
 
-#define GX_STRING_ID_STRING_1 1
-#define GX_STRING_ID_STRING_2 2
-#define DISPLAY_1_STRING_TABLE_SIZE 3
+#define GX_STRING_ID_STRING_5 1
+#define GX_STRING_ID_STRING_6 2
+#define GX_STRING_ID_STRING_7 3
+#define GX_STRING_ID_STRING_9 4
+#define GX_STRING_ID_STRING_10 5
+#define GX_STRING_ID_STRING_11 6
+#define GX_STRING_ID_STRING_33 7
+#define GX_STRING_ID_STRING_30 8
+#define GX_STRING_ID_STRING_32 9
+#define GX_STRING_ID_STRING_21 10
+#define GX_STRING_ID_STRING_22 11
+#define GX_STRING_ID_STRING_23 12
+#define GX_STRING_ID_STRING_24 13
+#define GX_STRING_ID_STRING_25 14
+#define GX_STRING_ID_STRING_1 15
+#define GX_STRING_ID_STRING_2 16
+#define GX_STRING_ID_STRING_3 17
+#define GX_STRING_ID_STRING_4 18
+#define GX_STRING_ID_STRING_8 19
+#define GX_STRING_ID_STRING_12 20
+#define GX_STRING_ID_STRING_13 21
+#define DISPLAY_1_STRING_TABLE_SIZE 22
 
 #endif                                       /* sentry                         */

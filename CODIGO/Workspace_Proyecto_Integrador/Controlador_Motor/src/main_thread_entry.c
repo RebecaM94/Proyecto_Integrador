@@ -151,8 +151,8 @@ void main_thread_entry(void) {
 		//window1_velocidad_properties.numeric_prompt_value = window1_velocidad_properties.numeric_prompt_value + 1;
 		//gx_numeric_prompt_value_set(&window1.window1_velocidad, window1_velocidad_properties.numeric_prompt_value);
 
-		gx_prompt_text_set(&window1.window1_prueba, (GX_CHAR *)"HolaRebe");
-		gx_numeric_prompt_value_set(&window1.window1_velocidad, (INT) lcd_rcv_message[0]);
+		//gx_prompt_text_set(&window1.window1_prueba, (GX_CHAR *)"HolaRebe");
+		gx_numeric_prompt_value_set(&window1.window1_DC, (INT) lcd_rcv_message[0]);
 		gx_system_canvas_refresh();
 
 		err = g_sf_message0.p_api->pend(g_sf_message0.p_ctrl, &main_thread_message_queue, (sf_message_header_t **) &p_message, ((ULONG)  10));

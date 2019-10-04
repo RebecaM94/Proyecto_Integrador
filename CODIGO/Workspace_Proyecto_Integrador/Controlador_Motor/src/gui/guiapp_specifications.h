@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.2.9                                               */
-/*  Date (dd.mm.yyyy): 27. 9.2019   Time (hh:mm): 16:19                        */
+/*  Date (dd.mm.yyyy):  4.10.2019   Time (hh:mm): 15:36                        */
 /*******************************************************************************/
 
 
@@ -22,7 +22,6 @@ extern   "C" {
 
 /* Define widget ids                                                           */
 
-#define ID_WINDOW1 1
 
 
 /* Define animation ids                                                        */
@@ -95,8 +94,25 @@ typedef struct
 typedef struct WINDOW1_CONTROL_BLOCK_STRUCT
 {
     GX_WINDOW_MEMBERS_DECLARE
-    GX_PROMPT window1_prueba;
-    GX_NUMERIC_PROMPT window1_velocidad;
+    GX_PROMPT window1_NombreProyecto;
+    GX_PROMPT window1_dutyCycle;
+    GX_PROMPT window1_vel;
+    GX_PROMPT window1_swV;
+    GX_PROMPT window1_hwV;
+    GX_PROMPT window1_program;
+    GX_PROMPT window1_aldo;
+    GX_PROMPT window1_paco;
+    GX_PROMPT window1_rebe;
+    GX_PROMPT window1_hw;
+    GX_PROMPT window1_hw_1;
+    GX_NUMERIC_PROMPT window1_ValorRPM;
+    GX_PROMPT window1_RPM;
+    GX_NUMERIC_PROMPT window1_DC;
+    GX_PROMPT window1_porcentage;
+    GX_PROMPT window1_swV_1;
+    GX_PROMPT window1_setpoint_text;
+    GX_PROMPT window1_RPM_setpoint;
+    GX_NUMERIC_PROMPT window1_ValorRPM_setpoint;
 } WINDOW1_CONTROL_BLOCK;
 
 
