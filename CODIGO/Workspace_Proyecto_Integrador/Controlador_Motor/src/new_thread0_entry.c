@@ -5,7 +5,7 @@
 
 #define UNUSED(x) (void)(x)
 
-UINT lcd_message[2]={0,0};
+UINT lcd_message[3]={0,0,0};
 
 bool first_flag = 1;
 
@@ -46,7 +46,9 @@ void new_thread0_entry(void)
 
     while(1)
     {
-        lcd_message[0]=(UINT) (setpoint_rpm/30.0);
+        lcd_message[0]=(UINT) (100 - pwm_out_int); //dutyCycle
+        lcd_message[1]=(UINT) speed_rpm; //
+        lcd_message[2]=(UINT) setpoint_rpm;
 
         /* send message to Thread 1 */
         // (TX_QUEUE *queue_ptr, VOID *source_ptr, ULONG wait_option);
@@ -63,6 +65,7 @@ void sampling_time_callback(timer_callback_args_t *p_args)
     /* Read ADC value*/
     g_adc0.p_api->read(g_adc0.p_ctrl, ADC_REG_CHANNEL_0, &u16ADC_Data);
 
+    //TODO map this entry to the possible speed values that the sensor/u can read
     //Map the ADC input into RPM using the required linear function RPM = 11.764705882353 (ADCvalue 0-255)
     setpoint_rpm = (float)(u16ADC_Data * 11.764705882353);
 

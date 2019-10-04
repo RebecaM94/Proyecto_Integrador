@@ -721,8 +721,8 @@
       <object id="rtos.threadx.object.queue.674268792">
         <property id="rtos.threadx.object.queue.name" value="LCD Queue"/>
         <property id="rtos.threadx.object.queue.symbol" value="g_new_queue_lcd"/>
-        <property id="rtos.threadx.object.queue.msg_size" value="2"/>
-        <property id="rtos.threadx.object.queue.queue_size" value="20"/>
+        <property id="rtos.threadx.object.queue.msg_size" value="3"/>
+        <property id="rtos.threadx.object.queue.queue_size" value="16"/>
       </object>
     </context>
     <context id="rtos.threadx.thread.955861978">

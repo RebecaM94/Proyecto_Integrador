@@ -938,7 +938,7 @@
   <v1:configSetting configurationId="p611.gpio_mode" altId="p611.gpio_mode.gpio_mode_out.low"/>
   <v1:configSetting configurationId="p511.gpio_mode" altId="p511.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p115" altId="p115.output.low"/>
-  <v1:configSetting configurationId="sci0.cts" altId="sci0.cts.none"></v1:configSetting>
+  <v1:configSetting configurationId="sci0.cts" altId="sci0.cts.none"/>
   <v1:configSetting configurationId="gpt2.mode" altId="gpt2.mode.gtiocaorgtiocb.a"/>
   <v1:configSetting configurationId="gpt2.gtioca" altId="gpt2.gtioca.p103">
     <v1:connectionSetting altId="p103.gpt2.gtioca"/>

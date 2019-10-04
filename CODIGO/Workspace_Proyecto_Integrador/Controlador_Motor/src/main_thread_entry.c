@@ -23,7 +23,7 @@ void g_lcd_spi_callback(spi_callback_args_t * p_args);
     Private global variables
  ***********************************************************************************************************************/
 static GX_EVENT g_gx_event;
-UINT lcd_rcv_message[2]={0,0};
+UINT lcd_rcv_message[3]={0,0,0};
 
 GX_WINDOW_ROOT * p_window_root;
 extern GX_CONST GX_STUDIO_WIDGET *guiapp_widget_table[];
@@ -153,6 +153,8 @@ void main_thread_entry(void) {
 
 		//gx_prompt_text_set(&window1.window1_prueba, (GX_CHAR *)"HolaRebe");
 		gx_numeric_prompt_value_set(&window1.window1_DC, (INT) lcd_rcv_message[0]);
+		gx_numeric_prompt_value_set(&window1.window1_ValorRPM, (INT) lcd_rcv_message[1]);
+		gx_numeric_prompt_value_set(&window1.window1_ValorRPM_setpoint, (INT) lcd_rcv_message[2]);
 		gx_system_canvas_refresh();
 
 		err = g_sf_message0.p_api->pend(g_sf_message0.p_ctrl, &main_thread_message_queue, (sf_message_header_t **) &p_message, ((ULONG)  10));
