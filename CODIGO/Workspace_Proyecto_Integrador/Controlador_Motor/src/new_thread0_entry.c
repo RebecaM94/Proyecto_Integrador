@@ -1,14 +1,18 @@
 #include "new_thread0.h"
 #include "main_thread.h"
 
-#define LOW 1
-#define HIGH 0
+#define SAMPLING_TIME 0.1 //seconds
+
+#define UNUSED(x) (void)(x)
 
 uint16_t u16ADC_Data = 0;
 uint16_t FilteredData = 0;
 UINT lcd_message[2]={12,13};
 
-static uint32_t capture_counter = 0;
+uint16_t pulses, prev_pulses;
+float speed_rpm, revolutions;
+
+bool first_flag = 1;
 
 void new_thread0_entry(void)
 {
@@ -49,6 +53,25 @@ void sampling_time_callback(timer_callback_args_t *p_args)
     g_adc0.p_api->read(g_adc0.p_ctrl, ADC_REG_CHANNEL_0, &u16ADC_Data);
     FilteredData = (u16ADC_Data * 100)/255;
 
+    if (first_flag)
+    {
+        prev_pulses = pulses;
+        first_flag = 0;
+    }
+
+    //Number of revolutions during the last sampling time
+    pulses = (pulses + prev_pulses)/2;
+    revolutions = (float) (pulses/4.0);
+
+    prev_pulses = pulses;
+
+    //Flush the pulses to avoid overflow
+    pulses = 0;
+
+    //Calculate the speed
+    speed_rpm  = (float)(60.0 * revolutions);
+    speed_rpm /= (float) SAMPLING_TIME;
+
     /* Change PWM dutyCycle P46*/
     g_timer1.p_api->dutyCycleSet(g_timer1.p_ctrl, FilteredData, TIMER_PWM_UNIT_PERCENT, 1);
 
@@ -56,6 +79,7 @@ void sampling_time_callback(timer_callback_args_t *p_args)
 
 void input_capture_callback(input_capture_callback_args_t *p_args)
 {
-    capture_counter = p_args->counter;
+    UNUSED(p_args);
+    pulses++;
 }
 

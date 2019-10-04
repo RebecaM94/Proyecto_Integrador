@@ -735,8 +735,8 @@
   <v1:configSetting configurationId="p104" altId="p104.sci8.rxd">
     <v1:connectionSetting altId="sci8.rxd.p104"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="p103" altId="p103.sci0.cts">
-    <v1:connectionSetting altId="sci0.cts.p103"/>
+  <v1:configSetting configurationId="p103" altId="p103.gpt2.gtioca">
+    <v1:connectionSetting altId="gpt2.gtioca.p103"/>
   </v1:configSetting>
   <v1:configSetting configurationId="p109" altId="p109.debug0.tdo">
     <v1:connectionSetting altId="debug0.tdo.p109"/>
@@ -938,7 +938,10 @@
   <v1:configSetting configurationId="p611.gpio_mode" altId="p611.gpio_mode.gpio_mode_out.low"/>
   <v1:configSetting configurationId="p511.gpio_mode" altId="p511.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p115" altId="p115.output.low"/>
-  <v1:configSetting configurationId="sci0.cts" altId="sci0.cts.p103">
-    <v1:connectionSetting altId="p103.sci0.cts"/>
+  <v1:configSetting configurationId="sci0.cts" altId="sci0.cts.none"></v1:configSetting>
+  <v1:configSetting configurationId="gpt2.mode" altId="gpt2.mode.gtiocaorgtiocb.a"/>
+  <v1:configSetting configurationId="gpt2.gtioca" altId="gpt2.gtioca.p103">
+    <v1:connectionSetting altId="p103.gpt2.gtioca"/>
   </v1:configSetting>
+  <v1:configSetting configurationId="gpt2.pairing" altId="gpt2.pairing.a"/>
 </v1:pinSettings>
