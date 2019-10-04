@@ -5,14 +5,23 @@
 
 #define UNUSED(x) (void)(x)
 
-uint16_t u16ADC_Data = 0;
-uint16_t FilteredData = 0;
-UINT lcd_message[2]={12,13};
-
-uint16_t pulses, prev_pulses;
-float speed_rpm, revolutions;
+UINT lcd_message[2]={0,0};
 
 bool first_flag = 1;
+
+#define K_p 0.07
+#define K_i 0.01
+#define K_d 0
+
+uint16_t u16ADC_Data;
+float setpoint_rpm;
+
+uint16_t pulses, prev_pulses;
+float revolutions, speed_rpm;
+float error, integral, derivative, last_error, pwm_out;
+uint32_t pwm_out_int;
+
+ioport_level_t P70_Status = IOPORT_LEVEL_HIGH;
 
 void new_thread0_entry(void)
 {
@@ -37,7 +46,7 @@ void new_thread0_entry(void)
 
     while(1)
     {
-        lcd_message[0]=(UINT) FilteredData;
+        lcd_message[0]=(UINT) (setpoint_rpm/30.0);
 
         /* send message to Thread 1 */
         // (TX_QUEUE *queue_ptr, VOID *source_ptr, ULONG wait_option);
@@ -49,9 +58,13 @@ void new_thread0_entry(void)
 
 void sampling_time_callback(timer_callback_args_t *p_args)
 {
+    UNUSED(p_args);
+
     /* Read ADC value*/
     g_adc0.p_api->read(g_adc0.p_ctrl, ADC_REG_CHANNEL_0, &u16ADC_Data);
-    FilteredData = (u16ADC_Data * 100)/255;
+
+    //Map the ADC input into RPM using the required linear function RPM = 11.764705882353 (ADCvalue 0-255)
+    setpoint_rpm = (float)(u16ADC_Data * 11.764705882353);
 
     if (first_flag)
     {
@@ -72,9 +85,30 @@ void sampling_time_callback(timer_callback_args_t *p_args)
     speed_rpm  = (float)(60.0 * revolutions);
     speed_rpm /= (float) SAMPLING_TIME;
 
-    /* Change PWM dutyCycle P46*/
-    g_timer1.p_api->dutyCycleSet(g_timer1.p_ctrl, FilteredData, TIMER_PWM_UNIT_PERCENT, 1);
+    /*--------------------Control-------------------------------------------------------*/
+    //Calculate the error
+     error = setpoint_rpm - speed_rpm;
 
+     integral += error;
+     // To avoid integral windup we simply restrict the integral error to a reasonable value.
+     if(integral > 50) integral = 50;
+
+     derivative = error - last_error;
+
+     last_error = error;
+
+     //PID
+     pwm_out = (K_p * error) + (K_i * integral) + (K_d * derivative);
+     pwm_out *=-1;
+
+     if (pwm_out > 100) pwm_out = 100;
+     else if (pwm_out < 0) pwm_out = 0;
+
+     pwm_out_int = (uint32_t) pwm_out;
+     /*---------------------------------------------------------------------------------*/
+
+    /* Change PWM dutyCycle P46---- 100 slow    0 fast*/
+    g_timer1.p_api->dutyCycleSet(g_timer1.p_ctrl, pwm_out_int, TIMER_PWM_UNIT_PERCENT, 1);
 }
 
 void input_capture_callback(input_capture_callback_args_t *p_args)
