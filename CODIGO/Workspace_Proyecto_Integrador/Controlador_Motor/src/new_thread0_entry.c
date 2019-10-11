@@ -76,7 +76,7 @@ void sampling_time_callback(timer_callback_args_t *p_args)
     }
 
     //Number of revolutions during the last sampling time
-    pulses = (pulses + prev_pulses)/2;
+    pulses = (uint16_t)((pulses + prev_pulses)/((uint16_t) 2));
     revolutions = (float) (pulses/4.0);
 
     prev_pulses = pulses;
@@ -101,7 +101,7 @@ void sampling_time_callback(timer_callback_args_t *p_args)
      last_error = error;
 
      //PID
-     pwm_out = (K_p * error) + (K_i * integral) + (K_d * derivative);
+     pwm_out = ((float)(K_p * error)) + ((float)(K_i * integral)) + (float)((K_d * derivative));
      pwm_out *=-1;
 
      if (pwm_out > 100) pwm_out = 100;
