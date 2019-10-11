@@ -7,7 +7,7 @@
 
 //static bool button_enabled = false;
 
-extern GX_WINDOW_ROOT * p_window_root;
+//extern GX_WINDOW_ROOT * p_window_root;
 
 //static UINT show_window(GX_WINDOW * p_new, GX_WIDGET * p_widget, bool detach_old);
 //static void update_text_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT string_id);

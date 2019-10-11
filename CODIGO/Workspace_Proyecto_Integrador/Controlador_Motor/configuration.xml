@@ -210,6 +210,10 @@
       <description>Express Logic ThreadX: Provides=[ThreadX]</description>
       <originalPack>Renesas.Synergy.1.4.0.pack</originalPack>
     </component>
+    <component apiversion="" class="HAL Drivers" condition="" group="all" subgroup="r_dac" variant="" vendor="Renesas" version="1.4.0">
+      <description>D/A Converter: Provides=[DAC]</description>
+      <originalPack>Renesas.Synergy.1.4.0.pack</originalPack>
+    </component>
   </synergyComponentSelection>
   <synergyIcuConfiguration/>
   <synergyMessagingConfiguration>
@@ -675,6 +679,13 @@
       <property id="module.driver.input_capture.capture_ipl" value="board.icu.common.irq.priority2"/>
       <property id="module.driver.input_capture.overflow_ipl" value="board.icu.common.irq.priority2"/>
     </module>
+    <module id="module.driver.dac_on_dac.1156348782">
+      <property id="module.driver.dac.name" value="g_dac0"/>
+      <property id="module.driver.dac.channel_id" value="1"/>
+      <property id="module.driver.dac.ad_da_synchronized" value="module.driver.dac.ad_da_synchronized.false"/>
+      <property id="module.driver.dac.data_format" value="module.driver.dac.data_format.data_format_flush_right"/>
+      <property id="module.driver.dac.output_amplifier_enabled" value="module.driver.dac.output_amplifier_enabled.false"/>
+    </module>
     <context id="_hal.0">
       <stack module="module.driver.ioport_on_ioport.0"/>
       <stack module="module.driver.fmi_on_fmi.0"/>
@@ -736,6 +747,7 @@
       <stack module="module.driver.timer_on_gpt.276206745"/>
       <stack module="module.driver.timer_on_gpt.1444007748"/>
       <stack module="module.driver.input_capture_on_gpt.358036065"/>
+      <stack module="module.driver.dac_on_dac.1156348782"/>
     </context>
     <config id="config.driver.jpeg_decode">
       <property id="config.driver.jpeg_decode.param_checking_enable" value="config.driver.jpeg_decode.param_checking_enable.bsp"/>
@@ -760,6 +772,9 @@
       <property id="config.driver.ioport.checking" value="config.driver.ioport.checking.system"/>
     </config>
     <config id="config.threadx.thread"/>
+    <config id="config.driver.dac">
+      <property id="config.driver.dac.param_checking_enable" value="config.driver.dac.param_checking_enable.bsp"/>
+    </config>
     <config id="config.driver.adc">
       <property id="config.driver.adc.param_checking_enable" value="config.driver.adc.param_checking_enable.enabled"/>
     </config>

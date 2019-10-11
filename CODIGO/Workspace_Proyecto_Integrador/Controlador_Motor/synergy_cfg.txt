@@ -78,8 +78,8 @@ Synergy Configuration
       P008 161 ADC0_AN03 GPIO23 - - "Analog mode" - - "ADC0: AN03; IRQ0: IRQ12" 
       P009 160 ADC0_AN04 GPIO22 - - "Analog mode" - - "ADC0: AN04; IRQ0: IRQ13" 
       P010 159 GPIO GPIO20 - IRQ14-DS "Input mode" - None "ADC1: AN03; IRQ0: IRQ14" 
-      P014 152 DAC0_DA GPIO19 - - "Analog mode" - - "ADC0: AN05; ADC1: AN05; CMP0: IVREF3; DAC120: DA" 
-      P015 151 ADC0_AN06 GPIO18 - - "Analog mode" - - "ADC0: AN06; ADC1: AN06; CMP0: IVCMP1; DAC121: DA; IRQ0: IRQ13" 
+      P014 152 DAC0_DA - - - "Analog mode" - - "ADC0: AN05; ADC1: AN05; CMP0: IVREF3; DAC120: DA" 
+      P015 151 - - - - Disabled - - "ADC0: AN06; ADC1: AN06; CMP0: IVCMP1; DAC121: DA; IRQ0: IRQ13" 
       P100 132 SCI0_RXD_MISO - Low None "Peripheral mode" CMOS None "AGT0: AGTIO; BUS0: D0_DQ0; GLCDC0: LCD_EXTCLK; IIC1: SCL; IRQ0: IRQ02; KINT0: KRM0; POEG0: GTETRG; SCI0: RXD_MISO; SCI0: SCL; SCI1: SCK; SPI0: MISO" 
       P101 131 SCI0_TXD_MOSI - Low None "Peripheral mode" CMOS None "AGT0: AGTEE; BUS0: D1_DQ1; GLCDC0: LCD_CLK; IIC1: SDA; IRQ0: IRQ01; KINT0: KRM1; POEG1: GTETRG; SCI0: SDA; SCI0: TXD_MOSI; SCI1: CTS_RTS_SS; SPI0: MOSI" 
       P102 130 SCI0_SCK - Low - "Peripheral mode" CMOS None "ADC0: ADTRG; AGT0: AGTO; BUS0: D2_DQ2; GLCDC0: LCD_TCON0; GPT2: GTIOCB; KINT0: KRM2; OPS0: GTOWLO; SCI0: SCK; SPI0: RSPCK" 
@@ -314,6 +314,9 @@ Synergy Configuration
     Parameter Checking: Default (BSP)
     
   Module "Input Capture Driver on r_gpt_input_capture"
+    Parameter Checking: Default (BSP)
+    
+  Module "DAC Driver on r_dac"
     Parameter Checking: Default (BSP)
     
   HAL
@@ -800,6 +803,13 @@ Synergy Configuration
       Input Capture Enable Filter: None (No filtering)
       Capture Interrupt Priority: Priority 2
       Overflow Interrupt Priority: Priority 2
+      
+    Instance "g_dac0 DAC Driver on r_dac"
+      Name: g_dac0
+      Channel: 1
+      Synchronize with ADC: Disabled
+      Data Format: Right Justified
+      Output Amplifier: Disable
       
   Messaging
     Subscriber "LCD Thread" 0 0
