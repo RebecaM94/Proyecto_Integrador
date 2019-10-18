@@ -231,7 +231,7 @@
   <v1:configSetting configurationId="p900.gpio_drivecapacity" altId="p900.gpio_speed.gpio_speed_high"/>
   <v1:configSetting configurationId="p401.gpio_mode" altId="p401.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p001.gpio_mode" altId="p001.gpio_mode.gpio_mode_an"/>
-  <v1:configSetting configurationId="adc0.an06" altId="adc0.an06.none"></v1:configSetting>
+  <v1:configSetting configurationId="adc0.an06" altId="adc0.an06.none"/>
   <v1:configSetting configurationId="p703.gpio_drivecapacity" altId="p703.gpio_speed.gpio_speed_high"/>
   <v1:configSetting configurationId="spi0.mode" altId="spi0.mode.disabled"/>
   <v1:configSetting configurationId="etherc1.rmii.mode" altId="etherc1.rmii.mode.custom.free"/>

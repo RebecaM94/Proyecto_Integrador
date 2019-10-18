@@ -41,13 +41,13 @@ GX_CONST GX_COLOR display_1_theme_1_color_table[] =
     0x00000000,
     0x00008410,
     0x0000c618,
-    0x0000e60c,
+    0x0000f800,  // 24   0x0000e60c
     0x0000a514,
     0x00007bef,
     0x0000ffff,
     0x00007bef,
-    0x0000f800,	//GX_COLOR_ID_ROJO
-    0x0000f564,	//GX_COLOR_ID_NARANJA
+    0x0000f800,	//GX_COLOR_ID_RED
+    0x0000f564,	//GX_COLOR_ID_ORANGE
     0x000007e0,	//GX_COLOR_ID_GREEN
     0x0000001f	//GX_COLOR_ID_BLUE
 };
@@ -426,7 +426,7 @@ GX_THEME display_1_theme_1 =
     },
     GX_SCROLLBAR_RELATIVE_THUMB|GX_SCROLLBAR_END_BUTTONS|GX_SCROLLBAR_VERTICAL,
     GX_SCROLLBAR_RELATIVE_THUMB|GX_SCROLLBAR_END_BUTTONS|GX_SCROLLBAR_HORIZONTAL,
-    29,                                      /* color table size               */
+    33,                                      /* color table size               */
     4,                                       /* font table size                */
     5,                                       /* pixelmap table size            */
     0                                        /* palette size                   */

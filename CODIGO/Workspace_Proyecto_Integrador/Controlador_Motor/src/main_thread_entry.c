@@ -155,7 +155,14 @@ void main_thread_entry(void) {
 		gx_numeric_prompt_value_set(&window1.window1_DC, (INT) lcd_rcv_message[0]);
 		gx_numeric_prompt_value_set(&window1.window1_ValorRPM, (INT) lcd_rcv_message[1]);
 		gx_numeric_prompt_value_set(&window1.window1_ValorRPM_setpoint, (INT) lcd_rcv_message[2]);
+		gx_widget_fill_color_set(&window1,GX_COLOR_ID_RED,GX_COLOR_ID_RED);
 		gx_system_canvas_refresh();
+
+		//gx_widget_fill_color_set(&window1,GX_COLOR_ID_ROJO,GX_COLOR_ID_ROJO);
+		//gx_widget_fill_color_set(&window1,GX_COLOR_ID_ROJO,GX_COLOR_ID_NARANJA);
+
+		//gx_widget_fill_color_set(&window1,GX_COLOR_ID_WINDOW_FILL,GX_COLOR_ID_WINDOW_FILL);
+
 
 		err = g_sf_message0.p_api->pend(g_sf_message0.p_ctrl, &main_thread_message_queue, (sf_message_header_t **) &p_message, ((ULONG)  10));
 		if (err)
