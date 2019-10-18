@@ -45,7 +45,11 @@ GX_CONST GX_COLOR display_1_theme_1_color_table[] =
     0x0000a514,
     0x00007bef,
     0x0000ffff,
-    0x00007bef
+    0x00007bef,
+    0x0000f800,	//GX_COLOR_ID_ROJO
+    0x0000f564,	//GX_COLOR_ID_NARANJA
+    0x000007e0,	//GX_COLOR_ID_GREEN
+    0x0000001f	//GX_COLOR_ID_BLUE
 };
 
 
