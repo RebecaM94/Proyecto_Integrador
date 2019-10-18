@@ -9,6 +9,8 @@ extern "C" void new_thread0_entry(void);
 #else 
 extern void new_thread0_entry(void);
 #endif
+#include "r_dac.h"
+#include "r_dac_api.h"
 #include "r_gpt_input_capture.h"
 #include "r_input_capture_api.h"
 #include "r_gpt.h"
@@ -19,6 +21,8 @@ extern void new_thread0_entry(void);
 extern "C"
 {
 #endif
+/** DAC on DAC Instance. */
+extern const dac_instance_t g_dac0;
 /** Timer on GPT Instance. */
 extern const input_capture_instance_t g_input_capture;
 #ifndef input_capture_callback

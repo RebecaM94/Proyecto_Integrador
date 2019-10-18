@@ -41,10 +41,6 @@ const ioport_pin_cfg_t g_bsp_pin_cfg_data[] = {
 		.pin_cfg = (IOPORT_CFG_IRQ_ENABLE | IOPORT_CFG_PORT_DIRECTION_INPUT),
 	},
 	{
-		.pin = IOPORT_PORT_00_PIN_14,
-		.pin_cfg = (IOPORT_CFG_ANALOG_ENABLE),
-	},
-	{
 		.pin = IOPORT_PORT_00_PIN_15,
 		.pin_cfg = (IOPORT_CFG_ANALOG_ENABLE),
 	},
@@ -62,7 +58,7 @@ const ioport_pin_cfg_t g_bsp_pin_cfg_data[] = {
 	},
 	{
 		.pin = IOPORT_PORT_01_PIN_03,
-		.pin_cfg = (IOPORT_CFG_PERIPHERAL_PIN | IOPORT_PERIPHERAL_SCI0_2_4_6_8),
+		.pin_cfg = (IOPORT_CFG_PERIPHERAL_PIN | IOPORT_PERIPHERAL_GPT1),
 	},
 	{
 		.pin = IOPORT_PORT_01_PIN_04,

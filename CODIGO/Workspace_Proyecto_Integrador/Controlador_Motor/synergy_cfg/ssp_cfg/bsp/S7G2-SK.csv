@@ -29,11 +29,11 @@ IRQ0: IRQ12"
 IRQ0: IRQ13"
 "P010","159","GPIO","GPIO20","","IRQ14-DS","Input mode","","None","ADC1: AN03
 IRQ0: IRQ14"
-"P014","152","DAC0_DA","GPIO19","","","Analog mode","","","ADC0: AN05
+"P014","152","","","","","Disabled","","","ADC0: AN05
 ADC1: AN05
 CMP0: IVREF3
 DAC120: DA"
-"P015","151","ADC0_AN06","GPIO18","","","Analog mode","","","ADC0: AN06
+"P015","151","DAC1_DA","","","","Analog mode","","","ADC0: AN06
 ADC1: AN06
 CMP0: IVCMP1
 DAC121: DA
@@ -69,7 +69,7 @@ KINT0: KRM2
 OPS0: GTOWLO
 SCI0: SCK
 SPI0: RSPCK"
-"P103","129","SCI0_CTS_RTS_SS","","Low","","Peripheral mode","CMOS","None","BUS0: D3_DQ3
+"P103","129","GPT2_GTIOCA","","Low","","Peripheral mode","CMOS","None","BUS0: D3_DQ3
 GLCDC0: LCD_TCON1
 GPT2: GTIOCA
 KINT0: KRM3

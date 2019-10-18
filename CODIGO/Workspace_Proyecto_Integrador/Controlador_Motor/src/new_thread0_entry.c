@@ -1,14 +1,20 @@
 #include "new_thread0.h"
 #include "main_thread.h"
 
-#define LOW 1
-#define HIGH 0
+#define SAMPLING_TIME 0.1 //seconds
+#define UNUSED(x) (void)(x)
+#define K_p 0.2
+#define K_i 0
+#define K_d 0
 
-uint16_t u16ADC_Data = 0;
-uint16_t FilteredData = 0;
-UINT lcd_message[2]={12,13};
+UINT lcd_message[3]={0,0,0};
 
-static uint32_t capture_counter = 0;
+bool first_flag = 1;
+
+const uint16_t SPEED_RESOLUTION = 150;
+uint16_t u16ADC_Data, u16setpoint_rpm, pulses, prev_pulses;
+uint32_t pwm_out_int;
+float setpoint_rpm, revolutions, speed_rpm, error, integral, derivative, last_error, pwm_out;
 
 void new_thread0_entry(void)
 {
@@ -21,6 +27,9 @@ void new_thread0_entry(void)
     g_timer1.p_api->open(g_timer1.p_ctrl, g_timer1.p_cfg);
     g_timer1.p_api->start(g_timer1.p_ctrl);
 
+    /* DAC for testing purposes*/
+    g_dac0.p_api->open(g_dac0.p_ctrl, g_dac0.p_cfg);
+    g_dac0.p_api->start(g_dac0.p_ctrl);
 
     /*Sampling time Timer configuration*/
     g_timer0.p_api->open (g_timer0.p_ctrl, g_timer0.p_cfg);
@@ -33,10 +42,11 @@ void new_thread0_entry(void)
 
     while(1)
     {
-        lcd_message[0]=(UINT) FilteredData;
+        lcd_message[0]=(UINT) (100 - pwm_out_int); //dutyCycle
+        lcd_message[1]=(UINT) speed_rpm; //
+        lcd_message[2]=(UINT) setpoint_rpm;
 
-        /* send message to Thread 1 */
-        // (TX_QUEUE *queue_ptr, VOID *source_ptr, ULONG wait_option);
+        /* send message to Thread LCD */
         tx_queue_send(&g_new_queue_lcd, lcd_message, TX_NO_WAIT);
 
         tx_thread_sleep (1);
@@ -45,17 +55,72 @@ void new_thread0_entry(void)
 
 void sampling_time_callback(timer_callback_args_t *p_args)
 {
-    /* Read ADC value*/
+    UNUSED(p_args);
+    /*-----------------------------------Setpoint-----------------------------------------*/
+    /* Read ADC value P00*/
     g_adc0.p_api->read(g_adc0.p_ctrl, ADC_REG_CHANNEL_0, &u16ADC_Data);
-    FilteredData = (u16ADC_Data * 100)/255;
 
-    /* Change PWM dutyCycle P46*/
-    g_timer1.p_api->dutyCycleSet(g_timer1.p_ctrl, FilteredData, TIMER_PWM_UNIT_PERCENT, 1);
+    //Map the ADC input into RPM using the required linear function RPM = 11.764705882353 (ADCvalue 0-255)
+    setpoint_rpm = (float)(u16ADC_Data * 11.764705882353);
 
+    //To reduce noise map the setpoint to multiples of SPEED_RESOLUTION rounding up when module is >0.5*SPEED_RESOLUTION
+    u16setpoint_rpm = (uint16_t)setpoint_rpm;
+    u16setpoint_rpm /= SPEED_RESOLUTION;
+    if (u16setpoint_rpm % 150 >= 75) u16setpoint_rpm ++;
+    u16setpoint_rpm *= SPEED_RESOLUTION;
+
+    /*-----------------------------------Speed-----------------------------------------*/
+    //Avoid averaging the first time the speed is calculated
+    if (first_flag)
+    {
+        prev_pulses = pulses;
+        first_flag = 0;
+    }
+
+    //Number of revolutions during the last sampling time
+    pulses = (uint16_t)((pulses + prev_pulses)/((uint16_t) 2));
+    revolutions = (float) (pulses/4.0);
+    prev_pulses = pulses;
+
+    //Flush the pulses to avoid overflow
+    pulses = 0;
+
+    //Calculate the speed
+    speed_rpm  = (float)(60.0 * revolutions);
+    speed_rpm /= (float) SAMPLING_TIME;
+
+    //For gain calculations print the speed into an analog pin
+    g_dac0.p_api->write(g_dac0.p_ctrl,(uint16_t)speed_rpm);
+
+    /*--------------------Control-------------------------------------------------------*/
+    //Calculate the error
+    error = (float) u16setpoint_rpm - speed_rpm;
+
+    integral += error;
+    // To avoid integral windup we simply restrict the integral error to a reasonable value.
+    if(integral > 50) integral = 50;
+
+    derivative = error - last_error;
+
+    last_error = error;
+
+    //PID
+    pwm_out = ((float)(K_p * error)) + ((float)(K_i * integral)) + (float)((K_d * derivative));
+    pwm_out *=-1;
+
+    if (pwm_out > 100) pwm_out = 100;
+    else if (pwm_out < 0) pwm_out = 0;
+
+    pwm_out_int = (uint32_t) pwm_out;
+    /*---------------------------------------------------------------------------------*/
+
+    /* Change PWM dutyCycle Pin=P46           100 slow    0 fast*/
+    g_timer1.p_api->dutyCycleSet(g_timer1.p_ctrl, pwm_out_int, TIMER_PWM_UNIT_PERCENT, 1);
 }
 
 void input_capture_callback(input_capture_callback_args_t *p_args)
 {
-    capture_counter = p_args->counter;
+    UNUSED(p_args);
+    pulses++;
 }
 

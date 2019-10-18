@@ -7,6 +7,14 @@ static void new_thread0_func(ULONG thread_input);
 static uint8_t new_thread0_stack[1024] BSP_PLACE_IN_SECTION_V2(".stack.new_thread0") BSP_ALIGN_VARIABLE_V2(BSP_STACK_ALIGNMENT);
 void tx_startup_err_callback(void *p_instance, void *p_data);
 void tx_startup_common_init(void);
+dac_instance_ctrl_t g_dac0_ctrl;
+const dac_cfg_t g_dac0_cfg =
+{ .channel = 1, .ad_da_synchronized = false, .data_format = DAC_DATA_FORMAT_FLUSH_RIGHT, .output_amplifier_enabled =
+          false,
+  .p_extend = NULL };
+/* Instance structure to use this module. */
+const dac_instance_t g_dac0 =
+{ .p_ctrl = &g_dac0_ctrl, .p_cfg = &g_dac0_cfg, .p_api = &g_dac_on_dac };
 #if !defined(SSP_SUPPRESS_ISR_g_input_capture) && !defined(SSP_SUPPRESS_ISR_GPT2)
 SSP_VECTOR_DEFINE_CHAN(gpt_input_capture_counter_overflow_isr, GPT, COUNTER_OVERFLOW, 2);
 #endif
