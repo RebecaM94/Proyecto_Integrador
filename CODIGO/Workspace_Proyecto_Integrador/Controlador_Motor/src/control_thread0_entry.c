@@ -4,8 +4,8 @@
 #define DIGITAL_3V 233
 #define MAX_RMP 3000.0
 
-#define HALF_SPEED_RES 37
-#define SPEED_RESOLUTION 75
+#define HALF_SPEED_RES 75
+#define SPEED_RESOLUTION 150
 #define SAMPLING_TIME 0.1 //seconds
 #define UNUSED(x) (void)(x)
 #define K_p 0.07
@@ -18,7 +18,7 @@ bool first_iteration = 1;
 
 uint16_t u16ADC_Data, u16setpoint_rpm, u16pulses,  u16prev_pulses;
 uint32_t pwm_out_int;
-float pulses_average, setpoint_rpm_1, setpoint_rpm_2, setpoint_rpm_3, setpoint_rpm_new, setpoint_rpm_average, setpoint_rpm,
+float setpoint_rpm_1, setpoint_rpm_2, setpoint_rpm_3, setpoint_rpm_new, setpoint_rpm_average, setpoint_rpm,
       revolutions, speed_rpm, error, integral, derivative, last_error, pwm_out;
 
 void control_thread0_entry(void)
@@ -91,6 +91,8 @@ void sampling_time_callback(timer_callback_args_t *p_args)
     if (u16setpoint_rpm % SPEED_RESOLUTION > HALF_SPEED_RES) u16setpoint_rpm ++;
     u16setpoint_rpm *= SPEED_RESOLUTION;
 
+    if (u16setpoint_rpm > 3000) u16setpoint_rpm = 3000;
+
     /*-----------------------------------Speed-----------------------------------------*/
     //Avoid averaging the first time the speed is calculated
     if (first_iteration)
@@ -100,8 +102,8 @@ void sampling_time_callback(timer_callback_args_t *p_args)
     }
 
     //Number of revolutions during the last sampling time
-    pulses_average = (float) ((u16pulses + u16prev_pulses)/2.0);
-    revolutions = (float) (pulses_average/4.0);
+    u16pulses = ((u16pulses + u16prev_pulses)/2);
+    revolutions = (float) (u16pulses/4.0);
     u16prev_pulses = u16pulses;
 
     //Flush the pulses value
