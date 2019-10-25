@@ -1,13 +1,13 @@
 /* generated thread header file - do not edit */
-#ifndef NEW_THREAD0_H_
-#define NEW_THREAD0_H_
+#ifndef CONTROL_THREAD0_H_
+#define CONTROL_THREAD0_H_
 #include "bsp_api.h"
 #include "tx_api.h"
 #include "hal_data.h"
 #ifdef __cplusplus 
-extern "C" void new_thread0_entry(void);
+extern "C" void control_thread0_entry(void);
 #else 
-extern void new_thread0_entry(void);
+extern void control_thread0_entry(void);
 #endif
 #include "r_dac.h"
 #include "r_dac_api.h"
@@ -46,4 +46,4 @@ void NULL(adc_callback_args_t *p_args);
 #ifdef __cplusplus
 } /* extern "C" */
 #endif
-#endif /* NEW_THREAD0_H_ */
+#endif /* CONTROL_THREAD0_H_ */

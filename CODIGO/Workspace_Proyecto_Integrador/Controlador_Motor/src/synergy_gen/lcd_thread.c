@@ -1,10 +1,10 @@
 /* generated thread source file - do not edit */
-#include "main_thread.h"
+#include "lcd_thread.h"
 
-TX_THREAD main_thread;
-void main_thread_create(void);
-static void main_thread_func(ULONG thread_input);
-static uint8_t main_thread_stack[2048] BSP_PLACE_IN_SECTION_V2(".stack.main_thread") BSP_ALIGN_VARIABLE_V2(BSP_STACK_ALIGNMENT);
+TX_THREAD lcd_thread;
+void lcd_thread_create(void);
+static void lcd_thread_func(ULONG thread_input);
+static uint8_t lcd_thread_stack[2048] BSP_PLACE_IN_SECTION_V2(".stack.lcd_thread") BSP_ALIGN_VARIABLE_V2(BSP_STACK_ALIGNMENT);
 void tx_startup_err_callback(void *p_instance, void *p_data);
 void tx_startup_common_init(void);
 #if !defined(SSP_SUPPRESS_ISR_g_spi_lcdc) && !defined(SSP_SUPPRESS_ISR_SCI0)
@@ -237,7 +237,7 @@ extern bool g_ssp_common_initialized;
 extern uint32_t g_ssp_common_thread_count;
 extern TX_SEMAPHORE g_ssp_common_initialized_semaphore;
 
-void main_thread_create(void)
+void lcd_thread_create(void)
 {
     /* Increment count so we will know the number of ISDE created threads. */
     g_ssp_common_thread_count++;
@@ -258,15 +258,15 @@ void main_thread_create(void)
     }
 
     UINT err;
-    err = tx_thread_create (&main_thread, (CHAR *) "LCD Thread", main_thread_func, (ULONG) NULL, &main_thread_stack,
-                            2048, 6, 6, 10, TX_AUTO_START);
+    err = tx_thread_create (&lcd_thread, (CHAR *) "LCD Thread", lcd_thread_func, (ULONG) NULL, &lcd_thread_stack, 2048,
+                            6, 6, 10, TX_AUTO_START);
     if (TX_SUCCESS != err)
     {
-        tx_startup_err_callback (&main_thread, 0);
+        tx_startup_err_callback (&lcd_thread, 0);
     }
 }
 
-static void main_thread_func(ULONG thread_input)
+static void lcd_thread_func(ULONG thread_input)
 {
     /* Not currently using thread_input. */
     SSP_PARAMETER_NOT_USED (thread_input);
@@ -281,5 +281,5 @@ static void main_thread_func(ULONG thread_input)
 #endif
 
     /* Enter user code for this thread. */
-    main_thread_entry ();
+    lcd_thread_entry ();
 }

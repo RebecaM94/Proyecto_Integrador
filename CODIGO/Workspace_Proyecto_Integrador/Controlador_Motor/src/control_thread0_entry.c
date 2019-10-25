@@ -1,22 +1,27 @@
-#include "new_thread0.h"
-#include "main_thread.h"
+#include <control_thread0.h>
+#include <lcd_thread.h>
 
+#define DIGITAL_3V 233
+#define MAX_RMP 3000.0
+
+#define HALF_SPEED_RES 37
+#define SPEED_RESOLUTION 75
 #define SAMPLING_TIME 0.1 //seconds
 #define UNUSED(x) (void)(x)
-#define K_p 0.2
-#define K_i 0
-#define K_d 0
+#define K_p 0.07
+#define K_i 0.01
+#define K_d 0.005
 
 UINT lcd_message[3]={0,0,0};
 
-bool first_flag = 1;
+bool first_iteration = 1;
 
-const uint16_t SPEED_RESOLUTION = 150;
-uint16_t u16ADC_Data, u16setpoint_rpm, pulses, prev_pulses;
+uint16_t u16ADC_Data, u16setpoint_rpm, u16pulses,  u16prev_pulses;
 uint32_t pwm_out_int;
-float setpoint_rpm, revolutions, speed_rpm, error, integral, derivative, last_error, pwm_out;
+float pulses_average, setpoint_rpm_1, setpoint_rpm_2, setpoint_rpm_3, setpoint_rpm_new, setpoint_rpm_average, setpoint_rpm,
+      revolutions, speed_rpm, error, integral, derivative, last_error, pwm_out;
 
-void new_thread0_entry(void)
+void control_thread0_entry(void)
 {
     /* ADC configuration P00*/
     g_adc0.p_api->open(g_adc0.p_ctrl, g_adc0.p_cfg);
@@ -44,7 +49,7 @@ void new_thread0_entry(void)
     {
         lcd_message[0]=(UINT) (100 - pwm_out_int); //dutyCycle
         lcd_message[1]=(UINT) speed_rpm; //
-        lcd_message[2]=(UINT) setpoint_rpm;
+        lcd_message[2]=(UINT) u16setpoint_rpm;
 
         /* send message to Thread LCD */
         tx_queue_send(&g_new_queue_lcd, lcd_message, TX_NO_WAIT);
@@ -60,30 +65,47 @@ void sampling_time_callback(timer_callback_args_t *p_args)
     /* Read ADC value P00*/
     g_adc0.p_api->read(g_adc0.p_ctrl, ADC_REG_CHANNEL_0, &u16ADC_Data);
 
-    //Map the ADC input into RPM using the required linear function RPM = 11.764705882353 (ADCvalue 0-255)
-    setpoint_rpm = (float)(u16ADC_Data * 11.764705882353);
+    /* Limit the entry to the digital value at which the pot gives a 3V output  */
+    if (u16ADC_Data > DIGITAL_3V) u16ADC_Data = DIGITAL_3V;
 
-    //To reduce noise map the setpoint to multiples of SPEED_RESOLUTION rounding up when module is >0.5*SPEED_RESOLUTION
-    u16setpoint_rpm = (uint16_t)setpoint_rpm;
+    //Map the ADC input into RPM using the required linear function in RPM
+    setpoint_rpm_new = (float)(u16ADC_Data * MAX_RMP/DIGITAL_3V);
+
+    //Set the previous setpoint values to the current one to avoid averaging with 0.
+    if (first_iteration)
+    {
+        setpoint_rpm_3 = setpoint_rpm_new;
+        setpoint_rpm_2 = setpoint_rpm_new;
+        setpoint_rpm_1 = setpoint_rpm_new;
+    }
+
+    setpoint_rpm_3 = setpoint_rpm_2;
+    setpoint_rpm_2 = setpoint_rpm_1;
+    setpoint_rpm_1 = setpoint_rpm_new;
+
+    setpoint_rpm_average = (float)(setpoint_rpm_1 + setpoint_rpm_2 + setpoint_rpm_3)/3.0;
+
+    //To reduce noise map the setpoint to multiples of SPEED_RESOLUTION rounding up when module is >HALF_SPEED_RES
+    u16setpoint_rpm = (uint16_t)setpoint_rpm_average;
     u16setpoint_rpm /= SPEED_RESOLUTION;
-    if (u16setpoint_rpm % 150 >= 75) u16setpoint_rpm ++;
+    if (u16setpoint_rpm % SPEED_RESOLUTION > HALF_SPEED_RES) u16setpoint_rpm ++;
     u16setpoint_rpm *= SPEED_RESOLUTION;
 
     /*-----------------------------------Speed-----------------------------------------*/
     //Avoid averaging the first time the speed is calculated
-    if (first_flag)
+    if (first_iteration)
     {
-        prev_pulses = pulses;
-        first_flag = 0;
+        u16prev_pulses = u16pulses;
+        first_iteration = 0;
     }
 
     //Number of revolutions during the last sampling time
-    pulses = (uint16_t)((pulses + prev_pulses)/((uint16_t) 2));
-    revolutions = (float) (pulses/4.0);
-    prev_pulses = pulses;
+    pulses_average = (float) ((u16pulses + u16prev_pulses)/2.0);
+    revolutions = (float) (pulses_average/4.0);
+    u16prev_pulses = u16pulses;
 
-    //Flush the pulses to avoid overflow
-    pulses = 0;
+    //Flush the pulses value
+    u16pulses = 0;
 
     //Calculate the speed
     speed_rpm  = (float)(60.0 * revolutions);
@@ -121,6 +143,5 @@ void sampling_time_callback(timer_callback_args_t *p_args)
 void input_capture_callback(input_capture_callback_args_t *p_args)
 {
     UNUSED(p_args);
-    pulses++;
+    u16pulses++;
 }
-
