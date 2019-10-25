@@ -250,7 +250,7 @@ void lcd_thread_create(void)
         tx_startup_err_callback (&g_main_semaphore_lcdc, 0);
     }
     UINT err_g_new_queue_lcd;
-    err_g_new_queue_lcd = tx_queue_create (&g_new_queue_lcd, (CHAR *) "LCD Queue", 3, &queue_memory_g_new_queue_lcd,
+    err_g_new_queue_lcd = tx_queue_create (&g_new_queue_lcd, (CHAR *) "LCD Queue", 4, &queue_memory_g_new_queue_lcd,
                                            sizeof(queue_memory_g_new_queue_lcd));
     if (TX_SUCCESS != err_g_new_queue_lcd)
     {

@@ -686,6 +686,22 @@
       <property id="module.driver.dac.data_format" value="module.driver.dac.data_format.data_format_flush_right"/>
       <property id="module.driver.dac.output_amplifier_enabled" value="module.driver.dac.output_amplifier_enabled.false"/>
     </module>
+    <module id="module.driver.input_capture_on_gpt.618921227">
+      <property id="module.driver.input_capture.name" value="g_fault_capture"/>
+      <property id="module.driver.input_capture.channel" value="3"/>
+      <property id="module.driver.input_capture.mode" value="module.driver.input_capture.mode.period"/>
+      <property id="module.driver.input_capture.signal_edge" value="module.driver.input_capture.signal_edge.falling"/>
+      <property id="module.driver.input_capture.repetition" value="module.driver.input_capture.repetition.periodic"/>
+      <property id="module.driver.input_capture.autostart" value="module.driver.input_capture.autostart.true"/>
+      <property id="module.driver.input_capture.p_callback" value="input_fault_callback"/>
+      <property id="module.driver.input_capture.signal" value="module.driver.input_capture.signal.gtioca"/>
+      <property id="module.driver.input_capture.signal_filter" value="module.driver.input_capture.signal_filter.none"/>
+      <property id="module.driver.input_capture.clock_divider" value="module.driver.input_capture.clock_divider.div1"/>
+      <property id="module.driver.input_capture.enable_level" value="module.driver.input_capture.enable_level.none"/>
+      <property id="module.driver.input_capture.enable_filter" value="module.driver.input_capture.enable_filter.none"/>
+      <property id="module.driver.input_capture.capture_ipl" value="board.icu.common.irq.priority0"/>
+      <property id="module.driver.input_capture.overflow_ipl" value="board.icu.common.irq.priority0"/>
+    </module>
     <context id="_hal.0">
       <stack module="module.driver.ioport_on_ioport.0"/>
       <stack module="module.driver.fmi_on_fmi.0"/>
@@ -732,7 +748,7 @@
       <object id="rtos.threadx.object.queue.674268792">
         <property id="rtos.threadx.object.queue.name" value="LCD Queue"/>
         <property id="rtos.threadx.object.queue.symbol" value="g_new_queue_lcd"/>
-        <property id="rtos.threadx.object.queue.msg_size" value="3"/>
+        <property id="rtos.threadx.object.queue.msg_size" value="4"/>
         <property id="rtos.threadx.object.queue.queue_size" value="16"/>
       </object>
     </context>
@@ -748,6 +764,7 @@
       <stack module="module.driver.timer_on_gpt.1444007748"/>
       <stack module="module.driver.input_capture_on_gpt.358036065"/>
       <stack module="module.driver.dac_on_dac.1156348782"/>
+      <stack module="module.driver.input_capture_on_gpt.618921227"/>
     </context>
     <config id="config.driver.jpeg_decode">
       <property id="config.driver.jpeg_decode.param_checking_enable" value="config.driver.jpeg_decode.param_checking_enable.bsp"/>

@@ -12,14 +12,14 @@
 #define K_i 0.01
 #define K_d 0.005
 
-UINT lcd_message[3]={0,0,0};
+UINT lcd_message[4]={0,0,0,0};
 
 bool first_iteration = 1;
 
-uint16_t u16ADC_Data, u16setpoint_rpm, u16pulses,  u16prev_pulses;
+uint16_t u16ADC_Data, u16setpoint_rpm, u16pulses,  u16prev_pulses, u16pulses_average;
 uint32_t pwm_out_int;
 float setpoint_rpm_1, setpoint_rpm_2, setpoint_rpm_3, setpoint_rpm_new, setpoint_rpm_average, setpoint_rpm,
-      revolutions, speed_rpm, error, integral, derivative, last_error, pwm_out;
+revolutions, speed_rpm, error, integral, derivative, last_error, pwm_out;
 
 void control_thread0_entry(void)
 {
@@ -28,7 +28,7 @@ void control_thread0_entry(void)
     g_adc0.p_api->scanCfg(g_adc0.p_ctrl, g_adc0.p_channel_cfg);
     g_adc0.p_api->scanStart(g_adc0.p_ctrl);
 
-    /* PWM configuration*/
+    /* PWM configuration P46 */
     g_timer1.p_api->open(g_timer1.p_ctrl, g_timer1.p_cfg);
     g_timer1.p_api->start(g_timer1.p_ctrl);
 
@@ -40,10 +40,17 @@ void control_thread0_entry(void)
     g_timer0.p_api->open (g_timer0.p_ctrl, g_timer0.p_cfg);
     g_timer0.p_api->start (g_timer0.p_ctrl);
 
-
-    /*Input capture configuration*/
+    /*Input capture configuration Hall Sensor P13 */
     g_input_capture.p_api->open(g_input_capture.p_ctrl, g_input_capture.p_cfg);
     g_input_capture.p_api->enable(g_input_capture.p_ctrl);
+
+    /*Input capture configuration nFault P43 */
+    g_fault_capture.p_api->open(g_fault_capture.p_ctrl, g_fault_capture.p_cfg);
+    g_fault_capture.p_api->enable(g_fault_capture.p_ctrl);
+
+    /*Enable the driver and the current to the motor*/
+    g_ioport.p_api->pinWrite(IOPORT_PORT_07_PIN_01, IOPORT_LEVEL_HIGH);
+    g_ioport.p_api->pinWrite(IOPORT_PORT_07_PIN_02, IOPORT_LEVEL_HIGH);
 
     while(1)
     {
@@ -74,7 +81,6 @@ void sampling_time_callback(timer_callback_args_t *p_args)
     //Set the previous setpoint values to the current one to avoid averaging with 0.
     if (first_iteration)
     {
-        setpoint_rpm_3 = setpoint_rpm_new;
         setpoint_rpm_2 = setpoint_rpm_new;
         setpoint_rpm_1 = setpoint_rpm_new;
     }
@@ -83,13 +89,13 @@ void sampling_time_callback(timer_callback_args_t *p_args)
     setpoint_rpm_2 = setpoint_rpm_1;
     setpoint_rpm_1 = setpoint_rpm_new;
 
-    setpoint_rpm_average = (float)(setpoint_rpm_1 + setpoint_rpm_2 + setpoint_rpm_3)/3.0;
+    setpoint_rpm_average = (float)(setpoint_rpm_1 + setpoint_rpm_2 + setpoint_rpm_3)/((float) 3.0);
 
     //To reduce noise map the setpoint to multiples of SPEED_RESOLUTION rounding up when module is >HALF_SPEED_RES
     u16setpoint_rpm = (uint16_t)setpoint_rpm_average;
     u16setpoint_rpm /= SPEED_RESOLUTION;
     if (u16setpoint_rpm % SPEED_RESOLUTION > HALF_SPEED_RES) u16setpoint_rpm ++;
-    u16setpoint_rpm *= SPEED_RESOLUTION;
+    u16setpoint_rpm *= ((uint16_t) SPEED_RESOLUTION);
 
     if (u16setpoint_rpm > 3000) u16setpoint_rpm = 3000;
 
@@ -102,9 +108,9 @@ void sampling_time_callback(timer_callback_args_t *p_args)
     }
 
     //Number of revolutions during the last sampling time
-    u16pulses = ((u16pulses + u16prev_pulses)/2);
-    revolutions = (float) (u16pulses/4.0);
-    u16prev_pulses = u16pulses;
+    u16pulses_average = (uint16_t) ((u16pulses + u16prev_pulses)/(uint16_t)2);
+    revolutions = (float) (u16pulses_average/4.0);
+    u16prev_pulses = u16pulses_average;
 
     //Flush the pulses value
     u16pulses = 0;
@@ -147,3 +153,14 @@ void input_capture_callback(input_capture_callback_args_t *p_args)
     UNUSED(p_args);
     u16pulses++;
 }
+
+void input_fault_callback(input_capture_callback_args_t *p_args)
+{
+    UNUSED(p_args);
+    lcd_message[3]=1;
+    /* Disable the driver */
+    g_ioport.p_api->pinWrite(IOPORT_PORT_07_PIN_01, IOPORT_LEVEL_LOW);
+    /* Disable the current to the motor */
+    g_ioport.p_api->pinWrite(IOPORT_PORT_07_PIN_02, IOPORT_LEVEL_LOW);
+}
+

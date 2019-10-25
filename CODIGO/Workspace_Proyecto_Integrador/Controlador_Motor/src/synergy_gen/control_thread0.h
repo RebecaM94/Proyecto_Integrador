@@ -9,10 +9,10 @@ extern "C" void control_thread0_entry(void);
 #else 
 extern void control_thread0_entry(void);
 #endif
-#include "r_dac.h"
-#include "r_dac_api.h"
 #include "r_gpt_input_capture.h"
 #include "r_input_capture_api.h"
+#include "r_dac.h"
+#include "r_dac_api.h"
 #include "r_gpt.h"
 #include "r_timer_api.h"
 #include "r_adc.h"
@@ -20,6 +20,11 @@ extern void control_thread0_entry(void);
 #ifdef __cplusplus
 extern "C"
 {
+#endif
+/** Timer on GPT Instance. */
+extern const input_capture_instance_t g_fault_capture;
+#ifndef input_fault_callback
+void input_fault_callback(input_capture_callback_args_t *p_args);
 #endif
 /** DAC on DAC Instance. */
 extern const dac_instance_t g_dac0;
