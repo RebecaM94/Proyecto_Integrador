@@ -693,7 +693,7 @@
       <stack module="module.driver.cgc_on_cgc.0"/>
     </context>
     <context id="rtos.threadx.thread.149014099">
-      <property id="_symbol" value="main_thread"/>
+      <property id="_symbol" value="lcd_thread"/>
       <property id="rtos.threadx.thread.name" value="LCD Thread"/>
       <property id="rtos.threadx.thread.stack" value="2048"/>
       <property id="rtos.threadx.thread.priority" value="6"/>
@@ -737,8 +737,8 @@
       </object>
     </context>
     <context id="rtos.threadx.thread.955861978">
-      <property id="_symbol" value="new_thread0"/>
-      <property id="rtos.threadx.thread.name" value="New Thread"/>
+      <property id="_symbol" value="control_thread0"/>
+      <property id="rtos.threadx.thread.name" value="Control Thread"/>
       <property id="rtos.threadx.thread.stack" value="1024"/>
       <property id="rtos.threadx.thread.priority" value="1"/>
       <property id="rtos.threadx.thread.autostart" value="rtos.threadx.thread.autostart.enabled"/>

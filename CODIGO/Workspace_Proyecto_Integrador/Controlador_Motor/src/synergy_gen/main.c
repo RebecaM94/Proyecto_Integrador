@@ -2,8 +2,8 @@
 #include "bsp_api.h"
 #include "tx_api.h"
 
-extern void main_thread_create(void);
-extern void new_thread0_create(void);
+extern void lcd_thread_create(void);
+extern void control_thread0_create(void);
 
 uint32_t g_ssp_common_thread_count;
 bool g_ssp_common_initialized;
@@ -58,8 +58,8 @@ void tx_application_define(void *first_unused_memory)
         tx_startup_err_callback (&g_ssp_common_initialized_semaphore, 0);
     }
 
-    main_thread_create ();
-    new_thread0_create ();
+    lcd_thread_create ();
+    control_thread0_create ();
 
 #ifdef TX_USER_ENABLE_TRACE
     TX_USER_ENABLE_TRACE;
