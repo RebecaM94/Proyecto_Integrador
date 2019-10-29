@@ -1,13 +1,13 @@
 /* generated thread header file - do not edit */
-#ifndef MAIN_THREAD_H_
-#define MAIN_THREAD_H_
+#ifndef LCD_THREAD_H_
+#define LCD_THREAD_H_
 #include "bsp_api.h"
 #include "tx_api.h"
 #include "hal_data.h"
 #ifdef __cplusplus 
-extern "C" void main_thread_entry(void);
+extern "C" void lcd_thread_entry(void);
 #else 
-extern void main_thread_entry(void);
+extern void lcd_thread_entry(void);
 #endif
 #include "r_sci_spi.h"
 #include "r_spi_api.h"
@@ -97,4 +97,4 @@ extern TX_QUEUE g_new_queue_lcd;
 #ifdef __cplusplus
 } /* extern "C" */
 #endif
-#endif /* MAIN_THREAD_H_ */
+#endif /* LCD_THREAD_H_ */

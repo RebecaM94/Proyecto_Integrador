@@ -60,7 +60,11 @@
 #define GX_COLOR_ID_DISABLED_FILL 26
 #define GX_COLOR_ID_READONLY_TEXT 27
 #define GX_COLOR_ID_READONLY_FILL 28
-#define DISPLAY_1_COLOR_TABLE_SIZE 29
+#define GX_COLOR_ID_RED 29
+#define GX_COLOR_ID_ORANGE 30
+#define GX_COLOR_ID_GREEN 31
+#define GX_COLOR_ID_BLUE 32
+#define DISPLAY_1_COLOR_TABLE_SIZE 33
 
 /* Font ID definitions                                                         */
 
